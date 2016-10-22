@@ -1,0 +1,2 @@
+#!/bin/bash
+(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd; node_modules/grunt-cli/bin/grunt)

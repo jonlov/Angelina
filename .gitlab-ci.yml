@@ -1,0 +1,39 @@
+###### NODE #####
+image: node:latest
+stages:
+  - build
+  - build_assets
+  - deploy
+
+build:
+  stage: build
+  script:
+    - npm install
+    - node_modules/bower/bin/bower install --allow-root
+  cache:
+    key: ${CI_BUILD_REF_NAME}
+    paths:
+      - node_modules/
+      - assets/bower_components
+  artifacts:
+    paths:
+      - node_modules/
+      - assets/bower_components
+
+# build_assets:
+#   stage: build_assets
+#   script:
+#     - node_modules/grunt-cli/bin/grunt prod
+#   artifacts:
+#     paths:
+#       - public/
+
+pages:
+  stage: deploy
+  script:
+    - node_modules/grunt-cli/bin/grunt prod
+  artifacts:
+    paths:
+      - public/
+  only:
+  - master

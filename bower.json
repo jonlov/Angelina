@@ -1,0 +1,21 @@
+{
+  "name": "Jhon-Music",
+  "authors": [
+    "Renew Studio Team <contact@renew.studio>",
+    "Robert Williams <robert151196@gmail.com>",
+    "Jonathan Lovera <rockjonathan18@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "dependencies": {
+    "fullpage.js": "^2.8.6",
+    "Instajam": "instajam#^2.0.3"
+  },
+  "resolutions": {
+    "angular": "~1.4.4",
+    "fullpage.js": "~2.7.7"
+  }
+}
