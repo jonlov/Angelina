@@ -19,7 +19,9 @@ module.exports.temporalFolder = temporalFolder;
 var cssFiles = {
     inject: [],
     concat: [
-        'bower_components/*/dist/**/*.min.css',
+        'bower_components/**/dist/**/*.min.css',
+        'bower_components/**/*.min.css',
+        '!bower_components/**/dist/**/*.min.css',
         'css/**/*.css',
         // 'assets/css/*.css'
     ]
@@ -30,9 +32,10 @@ var cssFiles = {
 var jsFiles = {
     inject: [],
     concat: [
-        'bower_components/*/dist/**/*.min.js',
-        // 'bower_components/jquery/dist/jquery.min.js',
-        // 'bower_components/Instajam/dist/instajam.min.js',
+        'js/jquery.min.js',
+        'bower_components/bootstrap/dist/js/bootstrap.min.js',
+        // 'bower_components/**/dist/**/*.min.js',
+        // '!bower_components/**/dist/**/**.min.js',
         'js/**/*.js'
     ]
 };
@@ -94,6 +97,7 @@ var assetsFilesToCopy = ['**/*.!(coffee|less)'];
 jsFiles.concat.map(function(path) {
     assetsFilesToCopy.push('!' + path);
 });
+assetsFilesToCopy.push('!bower_components/**/*');
 
 module.exports.assetsFilesToCopy = assetsFilesToCopy;
 

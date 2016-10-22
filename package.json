@@ -1,5 +1,5 @@
 {
-  "name": "Jhon-Music",
+  "name": "Angelina",
   "version": "1.0.0",
   "description": "Test9",
   "main": "Gruntfile.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://gitlab.com/Renew/Jhon-Music.git"
+    "url": "https://gitlab.com/Renew/Angelina.git"
   },
   "dependencies": {
     "bower": "^1.7.9",
@@ -25,6 +25,7 @@
     "grunt-contrib-less": "0.11.1",
     "grunt-contrib-uglify": "~0.4.0",
     "grunt-contrib-watch": "~0.5.3",
+    "grunt-phpmin": "^0.1.0",
     "grunt-sails-linker": "~0.9.5",
     "grunt-sync": "~0.0.4",
     "include-all": "^1.0.6"
@@ -39,6 +40,7 @@
     "express": "^4.14.0",
     "fs": "0.0.1-security",
     "grunt-express-server": "^0.5.3",
+    "grunt-php": "^1.5.1",
     "path": "^0.12.7"
   }
 }
