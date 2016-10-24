@@ -19,12 +19,12 @@ module.exports.temporalFolder = temporalFolder;
 var cssFiles = {
     inject: [],
     concat: [
-        'assets/bootstrap/css/bootstrap.min.css',
-        'assets/css/Contact-Form-Clean.css',
-        'assets/css/styles.css',
-        'assets/css/untitled.css',
+        'css/bootstrap.min.css',
+        'css/Contact-Form-Clean.css',
+        'css/styles.css',
+        'css/untitled.css',
         'carouselengine/initcarousel-1.css'
-        // 'assets/css/*.css'
+        // 'css/*.css'
     ]
 };
 
@@ -33,14 +33,13 @@ var cssFiles = {
 var jsFiles = {
     inject: [],
     concat: [
-        // 'carouselengine/froogaloop2.min.js',
         'carouselengine/jquery.js',
         'carouselengine/amazingcarousel.js',
         'carouselengine/initcarousel-1.js',
-        'assets/bootstrap/js/bootstrap.min.js',
-        'assets/js/amplitude.min.js',
-        'assets/js/renewMe.js'
-        // 'assets/js/*.js'
+        'js/bootstrap.min.js',
+        'js/amplitude.min.js',
+        'js/renewMe.js'
+        // 'js/*.js'
 
     ]
 };

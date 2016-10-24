@@ -96,7 +96,7 @@ div.col-md-6.col-md-offset-6 {
 }
 
 div.jumbotron {
-  background-image:url('../../assets/img/FONDO-VIDEOS.jpg');
+  background-image:url('../../img/FONDO-VIDEOS.jpg');
   width:100%;
   background-size:cover;
   background-position:center;
@@ -107,7 +107,7 @@ div.jumbotron {
 }
 
 div.jumbotron.bio {
-  background-image:url('../../assets/img/FONDO-BIO.jpg');
+  background-image:url('../../img/FONDO-BIO.jpg');
   width:100%;
   min-height:100vh;
   background-size:cover;
@@ -121,7 +121,7 @@ div.jumbotron.bio {
 }
 
 div.jumbotron.contact {
-  background-image:url('../../assets/img/FONDO-CONTACTO.jpg');
+  background-image:url('../../img/FONDO-CONTACTO.jpg');
   width:100%;
   background-size:100% 100%;
   background-position:center;
@@ -169,7 +169,7 @@ img.img-responsive.enjoy {
 }
 
 div.jumbotron.multimedia {
-  background-image:url('../../assets/img/FONDO-MUSICA.jpg');
+  background-image:url('../../img/FONDO-MUSICA.jpg');
   width:100%;
   min-height:50vh;
   background-size:100% 100%;
