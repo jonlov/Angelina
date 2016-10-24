@@ -9,16 +9,16 @@ build:
   stage: build
   script:
     - npm install
-    - node_modules/bower/bin/bower install --allow-root
+    # - node_modules/bower/bin/bower install --allow-root
   cache:
     key: ${CI_BUILD_REF_NAME}
     paths:
       - node_modules/
-      - assets/bower_components
+      # - assets/bower_components
   artifacts:
     paths:
       - node_modules/
-      - assets/bower_components
+      # - assets/bower_components
 
 # build_assets:
 #   stage: build_assets
