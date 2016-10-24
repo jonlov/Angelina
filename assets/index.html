@@ -2,184 +2,209 @@
 <html>
 
 <head>
-    <!--STYLES-->
-    <!--STYLES END-->
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="favicon.ico?JM" />
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> -->
-    <title>Jhon Music</title>
+    <title>Untitled</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/Contact-Form-Clean.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/untitled.css">
+
+
+    <!-- Insert to your webpage before the </head> -->
+    <link rel="stylesheet" type="text/css" href="carouselengine/initcarousel-1.css">
+    <script src="carouselengine/jquery.js"></script>
+    <script src="carouselengine/amazingcarousel.js"></script>
+    <script src="carouselengine/initcarousel-1.js"></script>
+    <!-- End of head section HTML codes -->
 </head>
 
 <body>
-    <nav class="navbar pos-fix navbar-default" style="display: none;">
+    <div class="col-md-12 col-sm-12 col-xs-12" style="position:fixed;padding:0;z-index:10;border-radius:0px;">
+        <nav class="navbar navbar-inverse hidden navbar-style">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand navbar-link" href="#"><img src="assets/img/LOGO.png" style="position:relative;width:148px;height:auto;top:-12px;"></a>
+                    <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                </div>
+                <div class="collapse navbar-collapse" id="navcol-1">
+                    <ul class="nav navbar-nav">
+                        <li role="presentation"><a href="#landing">INICIO </a></li>
+                        <li role="presentation"><a href="#bio">BIO </a></li>
+                        <li role="presentation"><a href="#">MUSICA </a></li>
+                        <li role="presentation"><a href="#">GALERIA </a></li>
+                        <li role="presentation"><a href="#">VIDEOS </a></li>
+                        <li role="presentation"><a href="#">CONTACTO </a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div id="landing" style="background-image:url(&quot;assets/img/FONDO-INICIO.jpg&quot;);background-size:cover;min-height:100vh;background-position:center;z-index:1;">
+        <div class="row">
+            <div class="col-md-6"><img class="img-responsive logo" src="assets/img/LOGO.png"></div>
+            <div class="col-md-6 download-content">
+                <div class="row">
+                    <div class="col-md-12"><img class="img-responsive img-style" src="assets/img/TEXTO.png"></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <button class="btn btn-download" type="button">DESCARGA </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12"><img src="assets/img/ARROW.png" class="arrow-style"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="jumbotron bio">
         <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <img src="img/logo-menu.png" alt="" height="58px">
-            </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav pos-rlt" style="left:20px;">
-                    <li><a go="home">INICIO</a></li>
-                    <li><a go="bio">BIO</a></li>
-                    <li><a go="music">MÚSICA</a></li>
-                    <li><a go="galery">GALERÍA</a></li>
-                    <li><a go="videos">VIDEOS</a></li>
-                    <li><a go="contact">CONTACTO</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right hidden-xs">
-                    <li>
-                        <a target="_BLANK" href="https://www.youtube.com/user/7210075" class="padder-xs"><img src="img/youtube.png" alt="" class="pos-rlt"></a>
-                    </li>
-                    <li>
-                        <a target="_BLANK" href="https://twitter.com/Jhonvzla_" class="padder-xs"><img src="img/tw.png" alt="" class="pos-rlt"></a>
-                    </li>
-                    <li>
-                        <a target="_BLANK" href="https://www.facebook.com/Jhon-Music-535470806630742" class="padder-xs"><img src="img/fb.png" alt="" class="pos-rlt"></a>
-                    </li>
-                    <li>
-                        <a target="_BLANK" href="https://www.instagram.com/jhonvzla_" class="padder-xs"><img src="img/ig.png" alt="" class="pos-rlt"></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <div class="pos-abs bg-image bg-browser-size bg-top-center bg-home-dinamic" style="background-image: url('img/bg/bg00-dynamic.png');top: -40px;" data-parallax="scroll" data-position="center" data-bleed="10" data-image-src="img/bg/bg00-static.jpg"></div>
-    <div class="pos-abs bg-image bg-browser-size bg-top-center bg-home-dinamic hidden-sm hidden-md hidden-lg" style="background-image: url('img/bg/bg00-dynamic.png');top: -40px;"></div>
-    <section id="home" class="bg-image bg-transparent h-full-vh">
-        <div class="row background-browser-size v-middle pos-rlt h-full w-full">
-            <div class="arrow-down bounce fa fa-angle-double-down"></div>
-            <div id="letters" class="col-xs-4 col-xs-offset-0 col-sm-3 col-sm-offset-1 col-md-2 col-md-offset-3" style="margin-top:120px;display:none;">
-                <img src="img/logo.png" width="100%">
-            </div>
-            <div id="right" class="hidden-xs col-xs-7 col-xs-offset-0 col-sm-4 col-sm-offset-4 col-md-3 col-md-offset-3 border-text top-25" style="display:none;">
-                <span style="font-size: 40px;">DISFRUTA</span>
-                <br />
-                <span style="font-size: 47px;line-height: 0;margin-top: -8px;"><b>MI TEMA</b></span>
-                <span class="pos-rlt" style="font-size: 27px;top: -14px;line-height: 0;margin-top: 0px;">PROMOCIONAL</span>
-                <br />
-                <a href="mp3/?file=1&download=true" class="btn btn-primary opacity-full" style="font-size: 17px;margin-left:32px;">DESCARGAR
-            </a>
-            </div>
-        </div>
-    </section>
-    <div class="white-after-home" style="background-color: #fff;width: 100%;display:block;margin: 0;max-width: none;height: 200px;"></div>
-    <section id="bio" class="bg-image bg-transparent h-full-vh" style="margin-top:250px;">
-        <div class="pos-abs bg-image bg-browser-size bg-top-center" style="background-image: url('img/bg/bg01-shape.png'); background-position: center bottom -64px;" data-parallax="scroll" data-image-src="img/bg/bg01.jpg"></div>
-        <div id="text" class="col-xs-10 col-xs-offset-1 col-sm-7 col-sm-offset-3 col-md-6 col-md-offset-3 pos-rlt justify top-15"><b>
-            CANTANTE Y COMPOSITOR VENEZOLANO, CARAQUEÑO. NACIDO EN EL AÑO 1996 BAJO EL NOMBRE JUAN ESTEVES (JHON). SU FAMILIA HA ESTADO CONFORMADA POR MUSICOS LO QUE LO HA AYUDADO A CRECER ENAMORADO DE LA MÚSICA, CON EL APOYO DE SUS PADRES FORMO PARTE DE LA ORQUESTA SINFÓNICA INFANTIL DE VENEZUELA POR VARIOS AÑOS LUEGO DE ESTO JHON ES IDENTIFICADO POR TOCAR VARIOS INSTRUMENTOS COMO LA GUITARRA, EL VIOLIN, EL TECLADO, BATERÍA, EL BAJO ENTRE OTROS. AL TRANSCURRIR LOS AÑOS CONTINUA SU SUEÑO AL FORMAR PARTE DE LA SEGUNDA TEMPORADA DE "GENERACIÓN S" POR VENEVISION EN EL AÑO 2014 CON UN DUO LLAMADO KEN Y JHON. A COMIENZOS DEL 2016 JHON DECIDE CONTINUAR SU CAMINO COMO SOLISTA PARA SEGUIR ESCALANDO Y VENCIENDO BARRERAS PARA LOGRAR UNA POR UNA CADA UNA DE SUS METAS.</b>
-        </div>
-    </section>
-    <div style="background-color: #fff;width: 100%;display: block;margin: 0;max-width: none;height: 200px;"></div>
-    <section id="music" class="bg-transparent no-padder h-full-vh">
-        <div class="pos-abs bg-image bg-browser-size bg-top-center" data-parallax="scroll" data-position="center" data-bleed="10" data-image-src="img/bg/bg02.jpg"></div>
-        <div class="pos-abs bg-image bg-browser-size" style="border: 60px solid #fff; border-right: 0; border-left: 0;"></div>
-        <div class="row background-browser-size pos-rlt h-full w-full">
-            <div class="hidden-xs hidden-sm col-md-4 col-md-offset-1" style="margin-top: 180px;">
-                <div id="line" class="border-text" style="padding-top:30px;padding-left:30px;">
-                    <span id="letters" class="inline" style="font-size: 47px;"><b>DALE PLAY</b></span>
-                    <br />
-                    <span id="letters" class="inline" style="font-size: 43px;line-height: 0;margin-top: -8px;">A LO NUEVO</span>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-6">
+                    <p>María Angelina Galindo Tomasello nacio en Maracay el 23 de julio de 1998 hija de Rosa María y Juan Manuel&nbsp;comenzo su carrera artística a los 6 a–os de edad participando en la orquesta sinfonica infantil del estado Aragua&nbsp;iniciando
+                        estudios en violín y viola, al mismo tiempo realizo estudios en el kínder musical y&nbsp;estudios en todas las aéreas diversas de teoría solfeo y cantoría perteneciente igualmente a la sinfonica infantil.&nbsp;En paralelo participo
+                        en el Taller de improvisacion actoral y expresion corporal en el Némesis Teatro A.C. talentos de América.&nbsp;En 2009 contando ya con 10 a–os de edad dio inicio a sus estudios vocales en Mayré Martínez Academia de Canto durante
+                        el trayecto de 5 a–os y&nbsp;obtener su título como cantante profesional..Durante su asistencia en la orquesta sinfonica infantil participo en varios eventos como miembro del coro infante, violín 2 y finalmente viola 1. Para los
+                        a–os 2008, 2010 y 2012 fue participante en el festival encuentro de talentos en&nbsp;la U.E.P. Liceo San José de Cagua, donde curso sus estudios académicos, también estuvo presente en el concurso ÒSolo tu vozÓ de Mayre Martínez&nbsp;academia
+                        de canto en sus ediciones &nbsp;IV, IX, X, XI. En el 2011, se presento como telonera en el concierto de la agrupación Òplan BÓ en Maracay,&nbsp;ese mismo a–o también participo en el concierto para ni–os realizado en las ferias
+                        de San José.&nbsp;Posteriormente, para el 2012 se presento en varios programas matutinos de canales regionales del estado Aragua como TIC TV, TRV y TVS, &nbsp;y en el evento aniversario de la emisora radial Ritmo 96.9fm. Ya para
+                        el 2013 participo en el concurso de canto Galería Idol transmitido por Tic TV y en el 2014 participo en el II festival Nuevas Voces evento&nbsp;de Bless Music.&nbsp;En el 2015 fue invitada al evento Metro Music 2015, para el mismo
+                        a–o se presento en el programa matutino un Día Diferente transmitido por el canal regional de estado Aragua TRV.&nbsp; </p>
                 </div>
             </div>
-            <div id="right" class="snd col-xs-7 col-xs-offset-4 col-sm-6 col-sm-offset-5 col-md-5 col-md-offset-2" style="font-size: 16px;line-height: 40px;margin-top: 120px;right:-40px;">
-                <span class="text-right hidden-xs">
-                    <b>
-                    <span class="pos-rlt" style="left:240px; top:15px;"><span class="currenttime">00:00</span> / <span class="duration">00:00</span></span>
-                    <br />
-                    <div class="pos-rlt time" style="font-size: 30px;top:10px;width: 350px;background: rgba(255, 255, 255, 0.35);height: 5px;"></div>
-                    <div class="pos-rlt trackProgress" style="font-size: 30px;top: 5px;width: 0;position: relative;background: #fff;height: 5px;"></div>
-                    <!-- <div class="pos-rlt trackProgress" style="font-size: 30px; top:10px;background: #fff;height: 5px;"></div> -->
-                    <!-- <div id="time"></div> -->
-                     <!-- <input class="time slider" type="range" value="0" /> -->
-                    <!-- <span class="pos-rlt" style="font-size: 30px; top:10px;">__________________________</span> -->
-                    </b>
-                </span>
-                <br />
-                <span class="toggle pos-abs" style="font-size: 28px;top: 55px;">
-                    <b> 
-                        1. QUIEN TE ENAMORE
-                        <a class="toggle-play"><img src="img/play.png"></a>
-                        <a class="toggle-pause"><img src="img/pause.png"></a>
-                    </b>
-                </span>
-                    <!-- <div class="toggle">
-                        <button class="toggle-play">Play</button>
-                        <button class="toggle-pause">Pause</button>
-                    </div>
-                    <button class="prev">Prev</button>
-                    <button class="next">Next</button>
-                    <button class="shuffle">Shuffle</button>
-                    <input class="time" type="range" value="0" />
-                    <span class="currenttime">00:00</span>/
-                    <span class="duration">00:00</span>
-                </div> -->
+        </div>
+    </div>
+    <div class="black-section first"></div>
+    <div class="jumbotron multimedia">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12"></div>
             </div>
         </div>
-    </section>
-    <div style="background-color: #fff;width: 100%;display: block;margin: 0;max-width: none;height: 200px;"></div>
-    <section id="galery" class="bg-transparent no-padder clear"></section>
-    <div style="background-color: #fff;width: 100%;display: block;margin: 0;max-width: none;height: 200px;"></div>
-    <section id="videos" class="bg-transparent no-padder h-full-vh">
-        <div class="pos-abs bg-image bg-browser-size bg-top-center" data-parallax="scroll" data-position="center" data-bleed="10" data-image-src="img/bg/bg04.jpg"></div>
-        <div class="pos-abs bg-image bg-browser-size" style="border: 60px solid #fff; border-right: 0; border-left: 0;"></div>
-        <div class="row background-browser-size v-middle pos-rlt h-full w-full">
-            <div class="col-xs-8 col-xs-offset-3 col-sm-6 col-sm-offset-1 col-md-4 col-md-offset-1  v-center">
-                <div id="line" class="hidden-xs border-text">
-                    <span id="letters" class="inline" style="font-size: 47px; padding-top:8px;"><b>MI NUEVO</b></span>
-                    <br />
-                    <span id="letters" class="inline" style="font-size: 47px;line-height: 0;margin-top: -8px;">VIDEO LYRIC</span>
+    </div>
+    <div class="black-section second">
+        <div style="margin:0px auto;">
+    
+<!-- Insert to your webpage where you want to display the carousel -->
+<div id="amazingcarousel-container-1">
+    <div id="amazingcarousel-1" style="display:none;position:relative;width:100%;max-width:720px;margin:0px auto 0px;">
+        <div class="amazingcarousel-list-container">
+            <ul class="amazingcarousel-list">
+                <li class="amazingcarousel-item">
+                    <div class="amazingcarousel-item-container">
+<div class="amazingcarousel-image"><a href="images/1-lightbox.jpg" title="1"  class="html5lightbox" data-group="amazingcarousel-1"><img src="images/1.jpg"  alt="1" /></a></div>
+<div class="amazingcarousel-title">1</div>                    </div>
+                </li>
+                <li class="amazingcarousel-item">
+                    <div class="amazingcarousel-item-container">
+<div class="amazingcarousel-image"><a href="images/2-lightbox.jpg" title="2"  class="html5lightbox" data-group="amazingcarousel-1"><img src="images/2.jpg"  alt="2" /></a></div>
+<div class="amazingcarousel-title">2</div>                    </div>
+                </li>
+                <li class="amazingcarousel-item">
+                    <div class="amazingcarousel-item-container">
+<div class="amazingcarousel-image"><a href="images/3-lightbox.jpg" title="3"  class="html5lightbox" data-group="amazingcarousel-1"><img src="images/3.jpg"  alt="3" /></a></div>
+<div class="amazingcarousel-title">3</div>                    </div>
+                </li>
+                <li class="amazingcarousel-item">
+                    <div class="amazingcarousel-item-container">
+<div class="amazingcarousel-image"><a href="images/4-lightbox.jpg" title="4"  class="html5lightbox" data-group="amazingcarousel-1"><img src="images/4.jpg"  alt="4" /></a></div>
+<div class="amazingcarousel-title">4</div>                    </div>
+                </li>
+                <li class="amazingcarousel-item">
+                    <div class="amazingcarousel-item-container">
+<div class="amazingcarousel-image"><a href="images/5-lightbox.jpg" title="5"  class="html5lightbox" data-group="amazingcarousel-1"><img src="images/5.jpg"  alt="5" /></a></div>
+<div class="amazingcarousel-title">5</div>                    </div>
+                </li>
+                <li class="amazingcarousel-item">
+                    <div class="amazingcarousel-item-container">
+<div class="amazingcarousel-image"><a href="images/6-lightbox.jpg" title="6"  class="html5lightbox" data-group="amazingcarousel-1"><img src="images/6.jpg"  alt="6" /></a></div>
+<div class="amazingcarousel-title">6</div>                    </div>
+                </li>
+                <li class="amazingcarousel-item">
+                    <div class="amazingcarousel-item-container">
+<div class="amazingcarousel-image"><a href="images/7-lightbox.jpg" title="7"  class="html5lightbox" data-group="amazingcarousel-1"><img src="images/7.jpg"  alt="7" /></a></div>
+<div class="amazingcarousel-title">7</div>                    </div>
+                </li>
+                <li class="amazingcarousel-item">
+                    <div class="amazingcarousel-item-container">
+<div class="amazingcarousel-image"><a href="images/8-lightbox.jpg" title="8"  class="html5lightbox" data-group="amazingcarousel-1"><img src="images/8.jpg"  alt="8" /></a></div>
+<div class="amazingcarousel-title">8</div>                    </div>
+                </li>
+                <li class="amazingcarousel-item">
+                    <div class="amazingcarousel-item-container">
+<div class="amazingcarousel-image"><a href="images/9-lightbox.jpg" title="9"  class="html5lightbox" data-group="amazingcarousel-1"><img src="images/9.jpg"  alt="9" /></a></div>
+<div class="amazingcarousel-title">9</div>                    </div>
+                </li>
+                <li class="amazingcarousel-item">
+                    <div class="amazingcarousel-item-container">
+<div class="amazingcarousel-image"><a href="images/10-lightbox.jpg" title="10"  class="html5lightbox" data-group="amazingcarousel-1"><img src="images/10.jpg"  alt="10" /></a></div>
+<div class="amazingcarousel-title">10</div>                    </div>
+                </li>
+                <li class="amazingcarousel-item">
+                    <div class="amazingcarousel-item-container">
+<div class="amazingcarousel-image"><a href="images/11-lightbox.jpg" title="11"  class="html5lightbox" data-group="amazingcarousel-1"><img src="images/11.jpg"  alt="11" /></a></div>
+<div class="amazingcarousel-title">11</div>                    </div>
+                </li>
+                <li class="amazingcarousel-item">
+                    <div class="amazingcarousel-item-container">
+<div class="amazingcarousel-image"><a href="images/12-lightbox.jpg" title="12"  class="html5lightbox" data-group="amazingcarousel-1"><img src="images/12.jpg"  alt="12" /></a></div>
+<div class="amazingcarousel-title">12</div>                    </div>
+                </li>
+            </ul>
+            <div class="amazingcarousel-prev"></div>
+            <div class="amazingcarousel-next"></div>
+        </div>
+        <div class="amazingcarousel-nav"></div>
+        <div class="amazingcarousel-engine"><a href="http://amazingcarousel.com">jQuery Image Carousel</a></div>
+    </div>
+</div>
+<!-- End of body section HTML codes -->
+
+</div>
+    </div>
+    <div id="landing" style="background-image:url(&quot;assets/img/FONDO-VIDEOS.jpg&quot;);background-size:cover;height:100vh;background-position:center;z-index:1;">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-12"><img class="img-responsive enjoy" src="assets/img/TEXTO-1.png"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <a href="#"><img class="img-responsive" src="assets/img/VIDEO-MINIATURA.png"></a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div id="right" class="videoImg col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-0 col-md-4 col-md-offset-2 top-25">
-                <a href="https://youtu.be/HlQmpAHjvt8" target="_BLANK" class="opacity-full">
-                    <!-- <img src="img/play.png" width="110%"> -->
-                    <img src="img/play.png" class="absolute play" style="margin: auto; position: absolute; top: 0; left: 0; bottom: 0; right: 0;">
-                    <img id="preview" src="img/video.png" width="110%">
-                </a>
+        </div>
+    </div>
+    <div id="landing" style="background-image:url(&quot;assets/img/FONDO-CONTACTO.jpg&quot;);background-size:cover;height:100vh;background-position:center;z-index:1;">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-6 col-sm-6 col-sm-offset-5 col-xs-6">
+                    <form method="post">
+                        <h2 class="text-center">Contact us</h2>
+                        <div class="form-group has-success has-feedback">
+                            <input class="form-control" type="text" name="name" placeholder="Name"><i class="form-control-feedback glyphicon glyphicon-ok" aria-hidden="true"></i></div>
+                        <div class="form-group has-error has-feedback">
+                            <input class="form-control" type="email" name="email" placeholder="Email"><i class="form-control-feedback glyphicon glyphicon-remove" aria-hidden="true"></i>
+                            <p class="help-block">Please enter a correct email address.</p>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" rows="14" name="message" placeholder="Message"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-primary" type="submit">send </button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
-    </section>
-    <div style="background-color: #fff;width: 100%;display: block;margin: 0;max-width: none;height: 200px;"></div>
-    <section id="contact" class="bg-transparent no-padder h-full-vh">
-        <div class="pos-abs bg-image bg-browser-size bg-top-center" data-parallax="scroll" data-position="center" data-bleed="10" data-image-src="img/bg/bg05.jpg"></div>
-        <div class="row background-browser-size v-middle pos-rlt h-full w-full">
-            <div id="letters" class="col-xs-7 col-xs-offset-1 col-sm-5 col-sm-offset-1 col-md-3 col-md-offset-2 top-20">
-                <form>
-                    <div class="form-group">
-                        <label for="usr">Nombre:</label>
-                        <input type="text" class="form-control no-radius" id="usr">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" class="form-control no-radius" id="email">
-                    </div>
-                    <div class="form-group">
-                        <label for="comment">Mensaje:</label>
-                        <textarea class="form-control no-radius" rows="5" id="comment"></textarea>
-                    </div>
-                    <span style="font-size: 25px;">Management & Booking - Pedro Morejon</span>
-                    <br />
-                    <span style="font-size: 22px;">Jhon.contrataciones@gmail.com</span>
-                    <br />
-                    <span style="font-size: 25px;">+58 412-6384171</span>
-                    <br />
-                    <button type="submit" class="btn btn-default no-radius">Enviar</button>
-                </form>
-            </div>
-            <iframe src="https://staging.renew.studio/api/renew/isotype" id="renew">
-            </iframe>
-        </div>
-    </section>
+    </div>
+<!--     <script src="assets/js/jquery.min.js"></script> -->
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/amplitude.min.js"></script>
 </body>
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
-<!--SCRIPTS-->
-<!--SCRIPTS END-->
 
 </html>
