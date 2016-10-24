@@ -107,7 +107,7 @@ div.jumbotron {
 }
 
 div.jumbotron.bio {
-  background-image:url('../../assets/img/FONDO-BiO.jpg');
+  background-image:url('../../assets/img/FONDO-BIO.jpg');
   width:100%;
   min-height:100vh;
   background-size:cover;
@@ -169,7 +169,7 @@ img.img-responsive.enjoy {
 }
 
 div.jumbotron.multimedia {
-  background-image:url('../../assets/img/FONDO-musica.jpg');
+  background-image:url('../../assets/img/FONDO-MUSICA.jpg');
   width:100%;
   min-height:50vh;
   background-size:100% 100%;

@@ -33,11 +33,13 @@ var cssFiles = {
 var jsFiles = {
     inject: [],
     concat: [
+        // 'carouselengine/froogaloop2.min.js',
         'carouselengine/jquery.js',
         'carouselengine/amazingcarousel.js',
         'carouselengine/initcarousel-1.js',
         'assets/bootstrap/js/bootstrap.min.js',
-        'assets/js/amplitude.min.js'
+        'assets/js/amplitude.min.js',
+        'assets/js/renewMe.js'
         // 'assets/js/*.js'
 
     ]
