@@ -11,6 +11,8 @@
     "url": "https://gitlab.com/Renew/Angelina.git"
   },
   "dependencies": {
+    "ejs": "^2.5.2",
+    "express": "^4.14.0",
     "grunt": "0.4.2",
     "grunt-cli": "^1.2.0",
     "grunt-contrib-clean": "~0.5.0",

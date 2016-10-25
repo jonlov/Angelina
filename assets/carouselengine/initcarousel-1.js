@@ -1,5 +1,5 @@
 jQuery(document).ready(function() {
-    var scripts = document.getElementsByTagName("script");
+    // var scripts = document.getElementsByTagName("script");
     var jsFolder = 'carouselengine/';
     // for (var i = 0; i < scripts.length; i++) {
     //     if( scripts[i].src && scripts[i].src.match(/initcarousel-1\.js/i))
