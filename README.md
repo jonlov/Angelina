@@ -9,13 +9,6 @@ To run this project local, clone the git and then inside the folder with the ter
 
 ```
 npm install
-```
-
-and then **(If you dont have bower installed, install it first)**
-
-```
-bower install
-```
 
 that's it! Now you can run the "Start Server" bash file if you are on a mac or just run in the terminal (In the git clone folder)
 
@@ -37,7 +30,6 @@ IMPORTANT !!!!
 ## TO-DO
 
 - [x] Added sections
-- [ ] Add angular app
 - [ ] Effects
 
 [localhost:8080]: http://localhost:8080/

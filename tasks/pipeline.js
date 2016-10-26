@@ -22,9 +22,9 @@ var cssFiles = {
         'css/bootstrap.min.css',
         'css/Contact-Form-Clean.css',
         'css/styles.css',
-        'css/untitled.css',	
+        'css/untitled.css',
         'carouselengine/initcarousel-1.css',
-	'css/jquery.pagepiling.css'
+        'css/jquery.pagepiling.css'
         // 'css/*.css'
     ]
 };
@@ -38,10 +38,10 @@ var jsFiles = {
         'carouselengine/amazingcarousel.js',
         'carouselengine/initcarousel-1.js',
         'js/bootstrap.min.js',
-        'js/amplitude.min.js',
         'js/renewMe.js',
-	'js/jquery.pagepiling.min.js',
-	'js/scripts.js'
+        'js/amplitude.min.js',
+        'js/jquery.pagepiling.min.js',
+        'js/scripts.js'
         // 'js/*.js'
 
     ]
