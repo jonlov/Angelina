@@ -1,3 +1,18 @@
+@font-face {
+    font-family: nexa;
+    src: url(../fonts/Nexa-Light.otf);
+}
+
+@font-face {
+    font-family: nexa;
+    src: url(../fonts/Nexa-Bold.otf);
+    font-weight: bold;
+}
+* {
+  font-family: nexa !important;
+}
+
+
 button.btn.btn-primary.btn-style {
   background-color:red;
 }
@@ -35,9 +50,6 @@ img.arrow {
   right:21%;
 }
 
-img.img-responsive {
-}
-
 div.col-md-6.col-md-offset-6 {
   text-align:center;
 }
@@ -58,7 +70,8 @@ img.img-responsive.img-style {
 }
 
 img.img-responsive.logo {
-  padding-top:21%;
+    padding-top: 34%;
+    padding-left: 20%;
 }
 
 @media (max-width:991px) {
@@ -166,6 +179,7 @@ h2.text-center {
 img.img-responsive.enjoy {
   margin-top:71px;
   margin-bottom:65px;
+  padding-left: 60px;
 }
 
 div.jumbotron.multimedia {

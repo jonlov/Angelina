@@ -10,10 +10,5 @@
   "license": "MIT",
   "homepage": "",
   "private": true,
-  "dependencies": {
-    
-  },
-  "resolutions": {
-    
-  }
+  "dependencies": {}
 }
