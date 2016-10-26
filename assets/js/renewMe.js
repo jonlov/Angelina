@@ -34,6 +34,7 @@ $(document).ready(function($) {
         section = $('#section');
 
     if (section == null) throw new Error('There is not <section>, <div class="section"> or <div id="section"> to load Renew Logo.');
+    section.last().css('position', 'absolute');
 
     section.last().append('<iframe src="https://staging.renew.studio/api/renew/isotype" id="renew"></iframe>');
     $('#renew').css(style);

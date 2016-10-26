@@ -9,6 +9,7 @@ To run this project local, clone the git and then inside the folder with the ter
 
 ```
 npm install
+```
 
 that's it! Now you can run the "Start Server" bash file if you are on a mac or just run in the terminal (In the git clone folder)
 
