@@ -42,6 +42,7 @@ span.label.label-default {
 }
 
 input.form-control {
+    color: white;
     border-radius: 0px;
 }
 
@@ -207,17 +208,37 @@ div.jumbotron.multimedia {
     height: 40vh;
 }
 
+@keyframes arrow-up-down {
+    from {margin-top: 35%;}
+    to {margin-top: 45%;}
+}
+
 img.arrow-style {
-    margin-top: 35%;
+    animation-name: arrow-up-down;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 button.btn.btn-download {
     background-color: rgba(84, 80, 80, 0.58);
+    border-radius: 10px;
     color: white;
     font-size: 25px;
+    text-align: center;
     padding-top: 1px;
-    padding-bottom: 1px;
+    padding-bottom: 0px;
     padding-left: 20px;
     margin-top: 13px;
     padding-right: 20px;
+    transition: 1s;
+}
+
+button.btn.btn-download:hover {
+    background-color: rgba(221, 158, 42, 0.58);
+    color: black;
+}
+
+.manager-text {
+  color:white !important;
 }
