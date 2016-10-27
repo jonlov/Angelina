@@ -24,7 +24,8 @@ var cssFiles = {
         'css/styles.css',
         'css/untitled.css',
         'carouselengine/initcarousel-1.css',
-        'css/jquery.pagepiling.css'
+        'css/jquery.pagepiling.css',
+	'css/repro.css'
         // 'css/*.css'
     ]
 };
@@ -34,14 +35,17 @@ var cssFiles = {
 var jsFiles = {
     inject: [],
     concat: [
-        'carouselengine/jquery.js',
+        //'carouselengine/jquery.js',
+	'js/jquery.min.js',
         'carouselengine/amazingcarousel.js',
         'carouselengine/initcarousel-1.js',
         'js/bootstrap.min.js',
         'js/renewMe.js',
         'js/amplitude.min.js',
         'js/jquery.pagepiling.min.js',
-        'js/scripts.js'
+        'js/scripts.js',
+	'js/repro.js',
+
         // 'js/*.js'
 
     ]
