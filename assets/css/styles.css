@@ -91,6 +91,10 @@ img.img-responsive.logo {
     div.col-md-6.download-content {
         padding-top: 40%;
     }
+    img.arrow-style {
+        animation: none !important;
+        margin-top: 20px;
+    }
 }
 
 .row {
@@ -209,13 +213,13 @@ div.jumbotron.multimedia {
 }
 
 @keyframes arrow-up-down {
-    from {margin-top: 35%;}
-    to {margin-top: 45%;}
+    from {margin-top: 100px;}
+    to {margin-top: 200px;}
 }
 
 img.arrow-style {
     animation-name: arrow-up-down;
-    animation-duration: 4s;
+    animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
