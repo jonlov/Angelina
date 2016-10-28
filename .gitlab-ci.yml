@@ -8,7 +8,7 @@ stages:
 build:
   stage: build
   script:
-    - npm install
+    - npm install --only=prod
     # - node_modules/bower/bin/bower install --allow-root
   cache:
     key: ${CI_BUILD_REF_NAME}

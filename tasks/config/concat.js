@@ -8,19 +8,30 @@
  * [concat](https://github.com/gruntjs/grunt-contrib-concat)
  *
  * For usage docs see:
- * 		https://github.com/gruntjs/grunt-contrib-concat
+ *      https://github.com/gruntjs/grunt-contrib-concat
  */
 var pipeline = require('../pipeline');
 module.exports = function(grunt) {
-
     grunt.config.set('concat', {
         js: {
-            src: require('../pipeline').jsFilesToConcatProd,
+            src: pipeline.jsFilesToConcatProd,
             dest: pipeline.temporalFolder + '/js/production.js'
         },
         css: {
-            src: require('../pipeline').cssFilesToConcatProd,
+            src: pipeline.cssFilesToConcatProd,
             dest: pipeline.temporalFolder + '/css/production.css'
+        },
+        renew: {
+            options: {
+                separator: ';',
+                stripBanners: pipeline.stripBanners,
+                banner: pipeline.banner,
+            },
+            src: [
+                pipeline.temporalFolder + '/js/renewMe.js',
+                pipeline.temporalFolder + '/js/production.js'
+            ],
+            dest: pipeline.temporalFolder + '/js/production.js'
         }
     });
 

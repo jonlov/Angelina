@@ -2,6 +2,7 @@
   "name": "Angelina",
   "version": "1.0.0",
   "description": "Test9",
+  "contact": "contact@renew.studio",
   "main": "Gruntfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -21,26 +22,39 @@
     "grunt-contrib-copy": "~0.5.0",
     "grunt-contrib-cssmin": "~0.9.0",
     "grunt-contrib-htmlmin": "^1.4.0",
+    "grunt-contrib-imagemin": "^1.0.1",
     "grunt-contrib-jst": "~0.6.0",
     "grunt-contrib-less": "0.11.1",
     "grunt-contrib-uglify": "~0.4.0",
-    "grunt-contrib-watch": "~0.5.3",
+    "grunt-hazy": "^0.1.7",
     "grunt-phpmin": "^0.1.0",
     "grunt-sails-linker": "~0.9.5",
     "grunt-sync": "~0.0.4",
-    "include-all": "^1.0.6"
+    "grunt-uncss": "^0.6.1",
+    "include-all": "^1.0.6",
+    "js-obfuscator": "^0.1.1"
   },
   "authors": [
     "Renew Studio Team <contact@renew.studio>",
     "Robert Williams <robert151196@gmail.com>",
-    "Jonathan Lovera <rockjonathan18@gmail.com>"
+    "Jonathan Lovera <jonathan@renew.studio>"
   ],
   "license": "ISC",
   "devDependencies": {
+    "ejs": "^2.5.2",
     "express": "^4.14.0",
-    "fs": "0.0.1-security",
+    "grunt": "0.4.2",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-coffee": "~0.10.1",
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-contrib-jst": "~0.6.0",
+    "grunt-contrib-less": "0.11.1",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-sails-linker": "~0.9.5",
     "grunt-express-server": "^0.5.3",
     "grunt-php": "^1.5.1",
-    "path": "^0.12.7"
+    "grunt-sync": "~0.0.4",
+    "include-all": "^1.0.6"
   }
 }

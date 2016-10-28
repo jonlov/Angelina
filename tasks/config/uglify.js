@@ -11,18 +11,32 @@
  */
 var pipeline = require('../pipeline');
 module.exports = function(grunt) {
-
-	grunt.config.set('uglify', {
-		options: {
-            mangle: false
+    grunt.config.set('uglify', {
+        options: {
+            mangle: true,
+            ASCIIOnly: true,
+            compress: {
+                sequences: true,
+                dead_code: true,
+                conditionals: true,
+                booleans: true,
+                unused: true,
+                if_return: true,
+                join_vars: true,
+                drop_console: true
+            }
         },
-		dist: {
+        dist: {
             expand: true,
-            src: ['js/**/*.js','bower_components_personal/**/*.js'],
+            src: ['js/**/*.js', 'bower_components_personal/**/*.js'],
             dest: pipeline.temporalFolder,
             cwd: pipeline.temporalFolder
-		}
-	});
+        },
+        prod: {
+            src: pipeline.temporalFolder + '/js/production.js',
+            dest: pipeline.temporalFolder + '/js/production.js'
+        }
+    });
 
-	grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
 };

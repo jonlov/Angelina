@@ -25,8 +25,8 @@ var cssFiles = {
         'css/untitled.css',
         'carouselengine/initcarousel-1.css',
         'css/jquery.pagepiling.css',
-	'css/repro.css',
-	'css/animations.css'
+        'css/repro.css',
+        'css/animations.css'
         // 'css/*.css'
     ]
 };
@@ -34,19 +34,22 @@ var cssFiles = {
 // Client-side javascript files to inject in order
 // (uses Grunt-style wildcard/glob/splat expressions)
 var jsFiles = {
-    inject: [],
+    inject: [
+        'js/renewMe.js' //--------------- > > > renewMe.js HAVE JQUERY
+    ],
     concat: [
-        //'carouselengine/jquery.js',
-	'js/jquery.min.js',
+        // renewMe.js HAVE JQUERY
+
+        '!js/jquery.min.js', //  --------------- > > > renewMe.js HAVE JQUERY
         'carouselengine/amazingcarousel.js',
         'carouselengine/initcarousel-1.js',
         'js/bootstrap.min.js',
-        'js/renewMe.js',
         'js/amplitude.min.js',
         'js/jquery.pagepiling.min.js',
         'js/scripts.js',
-	'js/repro.js',
-	'js/css3-animate-it.js'
+        // 'js/renewMe.js',
+        'js/repro.js',
+        'js/css3-animate-it.js'
 
         // 'js/*.js'
 
@@ -114,6 +117,10 @@ assetsFilesToCopy.push('!bower_components/**/*');
 
 module.exports.assetsFilesToCopy = assetsFilesToCopy;
 
+module.exports.stripBanners = true;
+module.exports.banner = '/*! PLEASE DO NOT TOUCH THIS FILE YOU CAN PERMANTLY DAMAGE YOUR APPLICATION, CONTACT THE RENEW TEAM TO MODIFY\n' +
+    ' * <%= grunt.template.today("yyyy") %> - Renew Studio (http://renew.studio)\n'+
+    ' * <%= pkg.name %> v<%= pkg.version %> */';
 
 // 
 // TEMPLATE FILES 

@@ -26,7 +26,7 @@ module.exports = function(grunt) {
             },
             files: [{
                     expand: true,
-                    src: ['**/*.ejs', '**/*.html'],
+                    src: ['**/*.html'],
                     dest: pipeline.temporalFolder,
                     cwd: pipeline.temporalFolder
                 }]

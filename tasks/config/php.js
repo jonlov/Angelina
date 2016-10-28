@@ -11,7 +11,7 @@ module.exports = function(grunt) {
         dist: {
             options: {
             	base: './public',
-                port: 5000
+                port: 8080
             }
         }
     });
