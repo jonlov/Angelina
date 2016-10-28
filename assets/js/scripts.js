@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('*[bounceInLeft], *[bounceInRight], *[bounceInDown]').each(function() {
+    $('*[bounceInLeft], *[bounceInRight], *[bounceInDown], *[bounceInUp]').each(function() {
         $(this).css({ opacity: 0 });
     });
 
@@ -17,6 +17,10 @@ $(document).ready(function() {
 
             $(section + ' *[bounceInDown]').each(function() {
                 $(this).addClass('animated bounceInDown go');
+            });
+
+            $(section + ' *[bounceInUp]').each(function() {
+                $(this).addClass('animated bounceInUp go');
             });
         };
 
