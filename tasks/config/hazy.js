@@ -33,7 +33,7 @@ module.exports = function(grunt) {
             expand: true,
             cwd: pipeline.temporalFolder,
             dest: pipeline.temporalFolder,
-            src: ['api/**/*.php']
+            src: 'api/**/*.php'
         },
         // js: {
         //     src: pipeline.temporalFolder + '/js/hazy.js', //require('../pipeline').jsFilesToHazyProd,

@@ -12,45 +12,34 @@ var pipeline = require('../pipeline');
 module.exports = function(grunt) {
     grunt.config.set('uncss', {
         dist: {
-            // options: {
-            //     csspath: '../' + pipeline.temporalFolder,
-            //     stylesheets: ['../' + pipeline.temporalFolder + '/**/*.css'],
-            //     htmlroot: '../' + pipeline.temporalFolder
-            // },
             options: {
-            //     compress: true,
-                csspath: '../public',
-                stylesheets: '../public/css/production.js',
-                htmlroot: '../public'
+                //     csspath: '../../../../' + pipeline.temporalFolder,
+                stylesheets: ['../' + pipeline.temporalFolder + '/css/production.css'],
+                htmlroot: '../' + pipeline.temporalFolder
             },
-            files: [{
-                    nonull: true,
-                    src: './public',
-                    // src: 'public/*.html',
-                    dest: 'public/css/compiled.min.css'
-                }]
-                //     'public/css/**/*.css': ['public/**/*.html']
-                // }
-                // options: {
-                // files: [{
-                //     nonull: true,
-                //     src: '**/*.css',
-                //     cwd: pipeline.temporalFolder,
-                //     dest: pipeline.temporalFolder + "/css/production.css"
-                // }]
-                // options: {
-                //     ignore: ['#added_at_runtime', '.created_by_jQuery']
-                // },
-                // files: [{
-                //   nonull: true,
-                //   src: ['http://localhost:8080/path1', 'http://localhost:8080/path2'],
-                //   dest: 'dist/css/tidy.css'
-                // }]
-                // files: [{
-                //     nonull: true,
-                //     src: ['**/*.css'],
-                //     cwd: pipeline.temporalFolder
-                // }]
+            files: {
+                src: ['public/index.html']
+            }
+            // options: {
+            // files: [{
+            //     nonull: true,
+            //     src: '**/*.css',
+            //     cwd: pipeline.temporalFolder,
+            //     dest: pipeline.temporalFolder + "/css/production.css"
+            // }]
+            // options: {
+            //     ignore: ['#added_at_runtime', '.created_by_jQuery']
+            // },
+            // files: [{
+            //   nonull: true,
+            //   src: ['http://localhost:8080/path1', 'http://localhost:8080/path2'],
+            //   dest: 'dist/css/tidy.css'
+            // }]
+            // files: [{
+            //     nonull: true,
+            //     src: ['**/*.css'],
+            //     cwd: pipeline.temporalFolder
+            // }]
         }
     });
 
