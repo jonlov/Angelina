@@ -25,7 +25,8 @@ var cssFiles = {
         'css/untitled.css',
         'carouselengine/initcarousel-1.css',
         'css/jquery.pagepiling.css',
-	'css/repro.css'
+	'css/repro.css',
+	'css/animations.css'
         // 'css/*.css'
     ]
 };
@@ -45,6 +46,7 @@ var jsFiles = {
         'js/jquery.pagepiling.min.js',
         'js/scripts.js',
 	'js/repro.js',
+	'js/css3-animate-it.js'
 
         // 'js/*.js'
 

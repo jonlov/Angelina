@@ -4,7 +4,7 @@
 }
 
 @font-face {
-    font-family: nexa;
+    font-family: nexa-b;
     src: url(../fonts/Nexa-Bold.otf);
     font-weight: bold;
 }
@@ -181,6 +181,8 @@ div.form-group {
 h2.text-center {
     width: 330px;
     color: white;
+    margin-left: 30%;
+    font-size: 30px;
 }
 
 img.img-responsive.enjoy {
@@ -212,17 +214,17 @@ div.jumbotron.multimedia {
     height: 40vh;
 }
 
-@keyframes arrow-up-down {
+/*@keyframes arrow-up-down {
     from {margin-top: 100px;}
     to {margin-top: 200px;}
-}
+}*/
 
-img.arrow-style {
+/*img.arrow-style {
     animation-name: arrow-up-down;
     animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
-}
+}*/
 
 button.btn.btn-download {
     background-color: rgba(84, 80, 80, 0.58);
@@ -237,6 +239,18 @@ button.btn.btn-download {
     padding-right: 20px;
     transition: 1s;
 }
+.btn-send {
+    background-color: rgba(84, 80, 80, 0.58);
+    border-radius: 10px;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    padding-top: 1px;
+    padding-bottom: 0px;
+    padding-left: 20px;
+    margin-top: 13px;
+    padding-right: 20px;
+}
 
 button.btn.btn-download:hover {
     background-color: rgba(221, 158, 42, 0.58);
@@ -245,4 +259,19 @@ button.btn.btn-download:hover {
 
 .manager-text {
   color:white !important;
+}
+p {
+       font-family: nexa-b !important; 
+
+}
+.form-style {
+    color: white;
+    border: transparent;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+.outline-none{
+    outline:none;
 }
