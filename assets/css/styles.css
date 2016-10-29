@@ -4,7 +4,7 @@
 }
 
 @font-face {
-    font-family: nexa;
+    font-family: nexa-b;
     src: url(../fonts/Nexa-Bold.otf);
     font-weight: bold;
 }
@@ -28,8 +28,12 @@ button.btn.btn-style {
     background-color: rgba(168, 166, 170, 0.55);
 }
 
-nav.navbar.navbar-default.navbar-style {
+nav.navbar.navbar-inverse.navbar-style {
     border-radius: 0px;
+    background-color: #1f1e1e;
+    border: transparent;
+    height: 60px;
+    background-image: none;
 }
 
 span.label {
@@ -188,6 +192,8 @@ div.form-group {
 h2.text-center {
     width: 330px;
     color: white;
+    font-size: 30px;
+    margin: auto;
 }
 
 img.img-responsive.enjoy {
@@ -256,4 +262,31 @@ button.btn.btn-download:hover {
 
 #amazingcarousel-container-1 {
   padding-top: 20% !important;
+}
+.nav-cont-style {
+    margin-left: 230px;
+   position: relative;
+   top: 4px;
+
+}
+.logo-nav {
+    margin-left: 90%;
+}
+
+.nav-cont-style-ico {
+    position: relative;
+   top: 7px;
+   margin-right: 5%;
+}
+.btn-send {
+    background-color: rgba(84, 80, 80, 0.58);
+    border-radius: 10px;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    padding-top: 1px;
+    padding-bottom: 0px;
+    padding-left: 20px;
+    margin-top: 13px;
+    padding-right: 20px;
 }
