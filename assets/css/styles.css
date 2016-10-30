@@ -275,8 +275,8 @@ button.btn.btn-download:hover {
 
 .nav-cont-style-ico {
     position: relative;
-   top: 7px;
-   margin-right: 5%;
+   top: 4px;
+   /*margin-right: 5%;*/
 }
 .btn-send {
     background-color: rgba(84, 80, 80, 0.58);
