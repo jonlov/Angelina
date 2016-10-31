@@ -1,10 +1,12 @@
 $(document).ready(function() {
+    $('nav').css({ opacity: 1 });
+
     $('*[bounceInLeft], *[bounceInRight], *[bounceInDown], *[bounceInUp]').each(function() {
         $(this).css({ opacity: 0 });
     });
 
     var section = '',
-        showAnimation = function(index) {
+        showAnimation = function(index, anchorLink) {
             section = '#section' + index;
 
             $(section + ' *[bounceInLeft]').each(function() {
@@ -22,6 +24,11 @@ $(document).ready(function() {
             $(section + ' *[bounceInUp]').each(function() {
                 $(this).addClass('animated bounceInUp go');
             });
+
+            // Navbar menu selected section
+            // console.log(anchorLink);
+            $('nav a').removeClass('active');
+            $('nav a[href="#' + anchorLink + '"]').addClass('active');
         };
 
     setTimeout(function() {
@@ -33,9 +40,9 @@ $(document).ready(function() {
         verticalCentered: false,
         css3: false,
         navigation: false,
-        anchors: ['home', 'about', 'music', 'galery', 'videos', 'contact'],
+        anchors: ['home', 'bio', 'music', 'galery', 'videos', 'contact'],
         afterLoad: function(anchorLink, index) {
-            showAnimation(index);
+            showAnimation(index, anchorLink);
         }
     });
 });

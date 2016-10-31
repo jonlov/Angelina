@@ -26,7 +26,8 @@ var cssFiles = {
         'carouselengine/initcarousel-1.css',
         'css/jquery.pagepiling.css',
         'css/repro.css',
-        'css/animations.css'
+        'css/animations.css',
+        'css/basicRenew.css'
         // 'css/*.css'
     ]
 };
