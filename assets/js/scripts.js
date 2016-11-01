@@ -45,6 +45,11 @@ $(document).ready(function() {
             showAnimation(index, anchorLink);
         }
     });
+
+    $("#youtube-a").hover(
+        function() {
+            $('#youtube-w').css("display", "block");
+        });
 });
 
 // DO NOT DELETE
