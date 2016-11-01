@@ -343,3 +343,35 @@ button.btn.btn-download:hover {
     padding-left: 37%;
 
 }
+#youtube-a > img {
+    -webkit-filter: invert(46%);
+    transition: 1s;
+}
+
+#youtube-a:hover > img {
+    -webkit-filter: initial !important;
+}
+#tw-a > img {
+    -webkit-filter: invert(46%);
+    transition: 1s;
+}
+
+#tw-a:hover > img {
+    -webkit-filter: initial !important;
+}
+#fb-a > img {
+    -webkit-filter: invert(46%);
+    transition: 1s;
+}
+
+#fb-a:hover > img {
+    -webkit-filter: initial !important;
+}
+#ig-a > img {
+    -webkit-filter: invert(46%);
+    transition: 1s;
+}
+
+#ig-a:hover > img {
+    -webkit-filter: initial !important;
+}
