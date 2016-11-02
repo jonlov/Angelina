@@ -1,16 +1,84 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
     margin: 0;
     padding: 0;
     border: 0;
@@ -19,37 +87,61 @@ time, mark, audio, video {
     vertical-align: baseline;
 }
 
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
     display: block;
 }
+
 body {
     line-height: 1;
 }
-ol, ul {
+
+ol,
+ul {
     list-style: none;
 }
-blockquote, q {
+
+blockquote,
+q {
     quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
     content: '';
     content: none;
 }
+
 table {
     border-collapse: collapse;
     border-spacing: 0;
 }
 
+
 /*
-	Body
+    Body
 */
+
+
 /*
     Large Player
 */
-div#large-player{
+
+div#large-player {
     margin: auto;
     /*margin-top: 20%;*/
     width: 50%;
@@ -57,29 +149,37 @@ div#large-player{
     border-radius: 0px;
     background-size: 100% 100%;
 }
+
+
 /*
     Top Bar
 */
-div#top-bar{
+
+div#top-bar {
     height: 45px;
-    background-color: transparent;;
+    background-color: transparent;
+    ;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
 
+
 /*
     Top Bar Elements
 */
+
+
 /*
     Window placeholder elements
 */
-div#window-size-buttons{
+
+div#window-size-buttons {
     float: left;
     margin-left: 15px;
     margin-top: 15px;
 }
 
-div.window-close{
+div.window-close {
     width: 15px;
     height: 15px;
     border-radius: 10px;
@@ -89,7 +189,7 @@ div.window-close{
     background-color: transparent;
 }
 
-div.window-min{
+div.window-min {
     width: 15px;
     height: 15px;
     border-radius: 10px;
@@ -98,7 +198,8 @@ div.window-min{
     /*background-color: #fbbe3a;*/
     background-color: transparent;
 }
-div.window-max{
+
+div.window-max {
     width: 15px;
     height: 15px;
     border-radius: 10px;
@@ -108,16 +209,19 @@ div.window-max{
     background-color: transparent;
 }
 
+
 /*
     Top Bar Controls
 */
-div#large-player-controls{
+
+div#large-player-controls {
     margin: auto;
     position: absolute;
-    left: 45%;
+    left: 55%;
     top: 12px;
 }
-div#previous{
+
+div#previous {
     height: 20px;
     width: 30px;
     cursor: pointer;
@@ -127,7 +231,8 @@ div#previous{
     float: left;
     margin-top: 12.5px;
 }
-div#play-pause.amplitude-play-pause{
+
+div#play-pause.amplitude-play-pause {
     height: 27px;
     width: 27px;
     cursor: pointer;
@@ -136,17 +241,20 @@ div#play-pause.amplitude-play-pause{
     margin-right: 20px;
     margin-top: 9px;
 }
-div#play-pause.amplitude-paused{
+
+div#play-pause.amplitude-paused {
     background-image: url('../images/black-play.png');
     background-repeat: no-repeat;
     background-size: 100%;
 }
-div#play-pause.amplitude-playing{
+
+div#play-pause.amplitude-playing {
     background-image: url('../images/black-pause.png');
     background-repeat: no-repeat;
     background-size: 100%;
 }
-div#next{
+
+div#next {
     height: 20px;
     width: 30px;
     cursor: pointer;
@@ -157,22 +265,26 @@ div#next{
     margin-top: 12.5px;
 }
 
+
 /*
     Now Playing Song Display
 */
-div#now-playing-song-display{
+
+div#now-playing-song-display {
     float: left;
     height: 45px;
     width: 100%;
     /*margin-left: 100px;*/
 }
-img#top-bar-album-art{
+
+img#top-bar-album-art {
     width: 45px;
     height: 45px;
     float: left;
     margin: 10px
 }
-div#now-playing-song-meta-container{
+
+div#now-playing-song-meta-container {
     width: 340px;
     height: 40px;
     background-color: #ececec;
@@ -183,30 +295,34 @@ div#now-playing-song-meta-container{
     padding-top: 5px;
     position: relative;
 }
-span.now-playing-title{
+
+span.now-playing-title {
     font-size: 20px;
     color: white;
     display: inline-block;
     margin-top: 10px;
 }
 
-span.album-information{
+span.album-information {
     font-size: 15px;
     color: #bd8c25;
     display: inline-block;
     margin-top: 0px;
 }
-div#song-time-visualization{
+
+div#song-time-visualization {
     height: 5px;
     width: 100%;
     margin-top: 0px;
     background-color: #836215;
 }
-div#song-time-visualization div.amplitude-song-time-visualization-status{
+
+div#song-time-visualization div.amplitude-song-time-visualization-status {
     height: 5px;
     background-color: #bd8c25;
 }
-div.current-time{
+
+div.current-time {
     position: absolute;
     font-size: 10px;
     bottom: 7px;
@@ -214,7 +330,8 @@ div.current-time{
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 300;
 }
-div.time-duration{
+
+div.time-duration {
     position: absolute;
     font-size: 10px;
     bottom: 7px;
@@ -222,13 +339,17 @@ div.time-duration{
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 300;
 }
+
+
 /*
     Right Side Search Container
 */
-div#right-side-search-container{
+
+div#right-side-search-container {
     float: left;
 }
-img#small-amplitude{
+
+img#small-amplitude {
     float: left;
     width: 25px;
     height: 25px;
@@ -236,7 +357,8 @@ img#small-amplitude{
     margin-right: 20px;
     margin-top: 10px;
 }
-input[type="text"]#search{
+
+input[type="text"]#search {
     height: 19px;
     width: 154px;
     border-radius: 5px;
@@ -247,10 +369,12 @@ input[type="text"]#search{
     color: #bdbdbd;
 }
 
+
 /*
     Left Content
 */
-div#left-content{
+
+div#left-content {
     background-color: #f6f6f6;
     height: 330px;
     float: left;
@@ -258,35 +382,41 @@ div#left-content{
     width: 299px;
     overflow-y: scroll;
 }
+
+
 /*
     Album container
 */
-div.album-container{
-   padding: 4px 0px 4px 15px;
-   height: 50px;
-   cursor: pointer;
-   clear: both;
+
+div.album-container {
+    padding: 4px 0px 4px 15px;
+    height: 50px;
+    cursor: pointer;
+    clear: both;
 }
 
-div.album-container img{
+div.album-container img {
     float: left;
     width: 50px;
     height: 50px;
     height: 50px;
     display: block;
 }
-div.album-meta{
+
+div.album-meta {
     float: left;
     padding: 5px;
 }
-div.album-meta  div.artist{
+
+div.album-meta div.artist {
     color: #606060;
     font-size: 14px;
     font-family: "Helvetica", sans-serif;
     font-weight: 400;
     line-height: 20px;
 }
-div.album-meta div.album-info{
+
+div.album-meta div.album-info {
     color: #d6d6d6;
     font-size: 14px;
     font-family: "Helvetica", sans-serif;
@@ -294,19 +424,24 @@ div.album-meta div.album-info{
     line-height: 20px;
 }
 
-div.album-container.active-album-container{
+div.album-container.active-album-container {
     background-color: #2665d7;
 }
-div.album-container.active-album-container div.album-meta div.artist{
+
+div.album-container.active-album-container div.album-meta div.artist {
     color: white;
 }
-div.album-container.active-album-container div.album-meta div.album-info{
+
+div.album-container.active-album-container div.album-meta div.album-info {
     color: white;
 }
+
+
 /*
     Right Content
 */
-div#right-content{
+
+div#right-content {
     float: left;
     height: 330px;
     /*width: 660px;*/
@@ -314,28 +449,33 @@ div#right-content{
     background-image: url('../images/bg.jpg');
     background-size: cover;
     background-position: center;
-
 }
+
+
 /*div.repro-cont{
     background-image: url('images/bg.jpg');
     background-size: 100% 100%;
 }*/
-div.album-display{
+
+div.album-display {
     width: 100%;
     display: none;
     clear: both;
 }
-div.album-header{
+
+div.album-header {
     height: 74px;
     padding: 23px;
 }
-div.album-header img{
+
+div.album-header img {
     height: 80px;
     width: 80px;
     display: block;
     float: left;
 }
-div.album-header div.album-artist{
+
+div.album-header div.album-artist {
     float: left;
     padding-top: 10px;
     color: white;
@@ -344,32 +484,38 @@ div.album-header div.album-artist{
     font-size: 20px;
     padding-left: 20px;
 }
-div#the-weatherman-header{
+
+div#the-weatherman-header {
     background-color: rgb(201, 197, 180);
 }
-div#rooms-for-adelaide-header{
+
+div#rooms-for-adelaide-header {
     background-color: rgb(182, 92, 54);
 }
-div#the-suburbs-header{
+
+div#the-suburbs-header {
     background-color: rgb(130, 45, 31);
 }
 
-div.album-details{
+div.album-details {
     padding-top: 30px;
-    color:white;
+    color: white;
     /*padding-left: 15px;*/
 }
-div.album-details img.album-art{
+
+div.album-details img.album-art {
     width: 160px;
     height: 160px;
     /*float: left;*/
     display: block;
 }
-div.album-details div.album-contents{
+
+div.album-details div.album-contents {
     /*float: left;*/
     /*padding-left: 15px;*/
 }
-div.album-details div.album-contents div.title{
+
+div.album-details div.album-contents div.title {
     font-family: "Helvetica", sans-serif;
     /*color: #000;*/
     border-bottom: 1px solid #d9d9d9;
@@ -377,7 +523,8 @@ div.album-details div.album-contents div.title{
     font-size: 20px;
     padding-bottom: 5px;
 }
-div.album-details div.album-contents div.song-title{
+
+div.album-details div.album-contents div.song-title {
     font-family: "Helvetica", sans-serif;
     /*color: #000;*/
     /*width: 455px;*/
@@ -385,31 +532,56 @@ div.album-details div.album-contents div.song-title{
     padding: 5px 0px 5px 0px;
     cursor: pointer;
 }
-div.album-details div.album-contents div.song-title img{
+
+div.album-details div.album-contents div.song-title img {
     width: 10px;
     margin-right: 5px;
     display: none;
 }
-div.album-details div.album-contents div.song-title.amplitude-active-song-container img{
+
+div.album-details div.album-contents div.song-title.amplitude-active-song-container img {
     display: inline;
 }
-div.album-details div.album-contents div.song-title.amplitude-active-song-container{
+
+div.album-details div.album-contents div.song-title.amplitude-active-song-container {
     background-color: rgba(189, 140, 37, 0.79);
-    color:black;
+    color: black;
 }
+
 
 /*
     Footer
 */
-div#footer{
+
+div#footer {
     clear: both;
     height: 70px;
     /*border-top: 1px solid #a2a2a2;*/
     float: left;
-/*    border-bottom-right-radius: 5px;
+    /*    border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;*/
-    background-color: rgba(0, 0, 0, 0.73);;
+    background-color: rgba(0, 0, 0, 0.73);
+    ;
     width: 100%;
     position: relative;
     top: -70px;
 }
+
+@media (min-width:992px) {
+    span.now-playing-title {
+        font-size: 15px;
+    }
+    span.album-information {
+        font-size: 10px;
+    }
+}
+
+@media (min-height:640px) { 
+    span.now-playing-title {
+        font-size: 15px;
+    }
+    span.album-information {
+        font-size: 10px;
+    }
+}
+

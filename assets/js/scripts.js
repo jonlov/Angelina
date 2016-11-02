@@ -46,10 +46,6 @@ $(document).ready(function() {
         }
     });
 
-    $("#youtube-a").hover(
-        function() {
-            $('#youtube-w').css("display", "block");
-        });
 });
 
 // DO NOT DELETE
