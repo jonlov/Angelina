@@ -401,3 +401,6 @@ button.btn.btn-download:hover {
         -webkit-filter: initial !important;
     }
 }
+.invalid {
+    border:1px solid rgba(243, 2, 2, 0.47) !important;
+}

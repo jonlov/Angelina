@@ -47,10 +47,11 @@ var jsFiles = {
         'js/bootstrap.min.js',
         'js/amplitude.min.js',
         'js/jquery.pagepiling.min.js',
-        'js/scripts.js',
+        'js/pagePiling.js',
         // 'js/renewMe.js',
         'js/repro.js',
-        'js/css3-animate-it.js'
+        'js/css3-animate-it.js',
+	'js/form.js'
 
         // 'js/*.js'
 
@@ -112,6 +113,9 @@ module.exports.jsFilesToConcatProd = jsFiles.concat.map(function(path) {
 //
 var assetsFilesToCopy = ['**/*.!(coffee|less)'];
 jsFiles.concat.map(function(path) {
+    assetsFilesToCopy.push('!' + path);
+});
+cssFiles.concat.map(function(path) {
     assetsFilesToCopy.push('!' + path);
 });
 assetsFilesToCopy.push('!bower_components/**/*');
