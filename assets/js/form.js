@@ -10,13 +10,26 @@ $(document).ready(function() {
     function sendForm(formData) {
         $.ajax({
             url: 'api/mail',
-            method: 'post',
-            dataType: 'json',
+            method: 'POST',
             data: formData,
-            success: function() {
-                $('#formContact').html('<div> Se ha enviado tu mensaje con exito </div>');
-            }
+            beforeSend: function() {
+                $("#formContact :input").attr("disabled", true);
+                $('.btn-send').prop('disabled', true);
 
+            },
+            complete: function() {
+                $("#formContact :input").attr("disabled", false);
+                $('.btn-send').prop('disabled', false);
+            },
+            success: function() {
+                $('#formContact').html('');
+                $('.alert-danger').addClass('hide');
+                $('.alert-success').removeClass('hide').html('Se ha enviado tu mensaje con exito.');
+            },
+            error: function() {
+                $('.alert-success').addClass('hide');
+                $('.alert-danger').removeClass('hide').html('Hubo un error inesperado, inténtalo de nuevo.');
+            }
         })
     }
     handleForm();
@@ -45,12 +58,12 @@ $(document).ready(function() {
             } else {
                 if (input.name == 'name') {
                     var length = 3,
-                		pattername = /^[a-zA-Z]*$/,
-                    	pattern = pattername.test(input.value);
+                     pattername = /^[a-zA-Z]*$/,
+                     pattern = pattername.test(input.value);
                 } else {
                     var length = 30,
-                    	pattern = true;
-                		$this = $('#formContact textarea[name="' + input.name + '"]');
+                     pattern = true;
+                     $this = $('#formContact textarea[name="' + input.name + '"]');
                 }
 
                 if (pattern && input.value.length >= length) {
@@ -63,9 +76,9 @@ $(document).ready(function() {
 
 
             }
-            $('.btn-send').prop('disabled', invalid)
-            	
+            $('.btn-send').prop('disabled', invalid);
+
         }
     });
-    $('.btn-send').prop('disabled', true)
+    $('.btn-send').prop('disabled', true);
 })

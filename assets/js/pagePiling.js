@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    $('#loading').addClass('hide');
     $('nav').css({ opacity: 1 });
 
     $('*[bounceInLeft], *[bounceInRight], *[bounceInDown], *[bounceInUp]').each(function() {
@@ -45,8 +46,12 @@ $(document).ready(function() {
             showAnimation(index, anchorLink);
         }
     });
-
     
+    $('.nav a').on('click', function() {
+        $('.btn-navbar').click(); //bootstrap 2.x
+        $('.navbar-toggle').click() //bootstrap 3.x by Richard
+    });
+
 });
 
 // DO NOT DELETE

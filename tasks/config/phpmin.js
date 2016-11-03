@@ -22,7 +22,7 @@ module.exports = function(grunt) {
             },
             files: [{
                     expand: true,
-                    src: ['**/*.php', '**/*.php'],
+                    src: ['**/*.php', '**/*.php', '!**/class.*.php'],
                     dest: pipeline.temporalFolder,
                     cwd: pipeline.temporalFolder
                 }]

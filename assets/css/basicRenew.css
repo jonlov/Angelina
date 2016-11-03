@@ -67,6 +67,10 @@
     text-align: center;
 }
 
+.text-white {
+    color: #fff !important;
+}
+
 .m-xxs {
     margin: 2px 4px;
 }
@@ -441,6 +445,8 @@
     opacity: 1 !important;
 }
 
-.clear, .clear:after, .clear:before {
+.clear,
+.clear:after,
+.clear:before {
     clear: both;
 }

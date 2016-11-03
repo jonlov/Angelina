@@ -5,8 +5,8 @@
 
 @font-face {
     font-family: nexa-b;
-    src: url(../fonts/Nexa-Bold.otf);
     font-weight: bold;
+    src: url(../fonts/Nexa-Bold.otf);
 }
 
 body {
@@ -18,22 +18,23 @@ button.btn.btn-primary.btn-style {
 }
 
 button.btn.btn-style {
-    height: 36px;
-    font-size: 25px;
-    padding: 0;
-    border-radius: 10px;
-    width: 199px;
-    color: white;
-    margin-top: 10px;
     background-color: rgba(168, 166, 170, 0.55);
+    border-radius: 10px;
+    color: white;
+    font-size: 25px;
+    height: 36px;
+    margin-top: 10px;
+    padding: 0;
+    width: 199px;
+    1;
 }
 
 nav.navbar.navbar-inverse.navbar-style {
-    border-radius: 0px;
     background-color: #080808;
-    border: transparent;
-    height: 60px;
     background-image: none;
+    border: transparent;
+    border-radius: 0px;
+    height: 60px;
 }
 
 .navbar-inverse .navbar-nav>li>a.active {
@@ -45,13 +46,13 @@ span.label {
 }
 
 span.label.label-default {
-    font-size: 20px;
     float: left;
+    font-size: 20px;
 }
 
 input.form-control {
-    color: white;
     border-radius: 0px;
+    color: white;
 }
 
 img.arrow {
@@ -69,8 +70,8 @@ button.btn.btn-default {
 
 div.download-content {
     display: inline-block;
+    /* padding:0px; */
     text-align: center;
-    /*padding:0px;*/
 }
 
 img.img-responsive.img-style {
@@ -79,8 +80,10 @@ img.img-responsive.img-style {
 }
 
 img.img-responsive.logo {
-    padding-top: 34%;
+    max-width: 450px;
+    /*max-height: */
     padding-left: 20%;
+    padding-top: 34%;
 }
 
 @media (max-width:991px) {
@@ -94,16 +97,21 @@ img.img-responsive.logo {
 
 @media (max-height:640px) {
     img.arrow-style {
-        animation: none !important;
         margin-top: 20px;
     }
 }
 
+@media (max-width: 498px) {
+    #formContact h2 {
+        text-align: left;
+    }
+}
+
 p {
+    color: white;
     font-size: 15px !important;
     font-weight: bold;
     text-align: justify;
-    color: white;
 }
 
 .top-5 {
@@ -111,13 +119,12 @@ p {
 }
 
 
-/*.section {
-    overflow: hidden;
-}*/
+/* .section {
+    overflow: hidden; */
 
 .top-100 {
     margin-top: 100px;
-    /*top: 60px;*/
+    /* top: 60px; */
 }
 
 .h-full {
@@ -126,9 +133,9 @@ p {
 
 div.jumbotron {
     background-image: url('../img/FONDO-VIDEOS.jpg');
-    width: 100%;
-    background-size: cover;
     background-position: center;
+    background-size: cover;
+    width: 100%;
 }
 
 div.jumbotron {
@@ -137,27 +144,27 @@ div.jumbotron {
 
 div.jumbotron.bio {
     background-image: url('../img/FONDO-BIO.jpg');
-    width: 100%;
-    min-height: 100vh;
-    background-size: cover;
     background-position: center;
+    background-size: cover;
     line-height: 1.3 !important;
+    min-height: 100vh;
+    width: 100%;
 }
 
 .jumbotron {
-    padding-top: 0px !important;
-    padding-bottom: 0px !important;
     margin-bottom: 0px;
+    padding-bottom: 0px !important;
+    padding-top: 0px !important;
 }
 
 div.jumbotron.contact {
     background-image: url('../img/FONDO-CONTACTO.jpg');
-    width: 100%;
-    background-size: 100% 100%;
     background-position: center;
+    background-size: 100% 100%;
+    width: 100%;
 }
 
-div.form-group {}
+div.form-group { }
 
 .form-control {
     background-color: rgba(0, 0, 0, 0.47);
@@ -171,25 +178,31 @@ div.form-group {}
 }
 
 @media (max-width:991px) {
-    img.img-responsive {
+    img.img-responsive.img-style {
         width: 50%;
     }
 }
 
 @media (max-width:767px) {
-    img.img-responsive {
+    img.img-responsive.img-style {
+        padding: 0;
         width: 75%;
     }
-    .form-control {
-        width: 300px;
-        color: rgb(252, 248, 248);
+    div.col-md-6.download-content {
+        bottom: 120px;
+        float: right;
+        position: absolute;
+        right: -95px;
     }
-    /*div.col-md-6.download-content {
-        padding-top: 40%;
-    }*/
+    .form-control {
+        color: rgb(252, 248, 248);
+        /* width: 300px; */
+    }
+    /* div.col-md-6.download-content {
+        padding-top: 40%; */
     img.arrow-style {
-        animation: none !important;
         margin-top: 20px;
+        /* animation: none !important; */
     }
 }
 
@@ -198,44 +211,44 @@ div.form-group {
 }
 
 h2.text-center {
-    width: 330px;
     color: white;
     font-size: 30px;
     margin: auto;
+    /*width: 330px;*/
 }
 
 img.img-responsive.enjoy {
-    margin-top: 71px;
     margin-bottom: 65px;
+    margin-top: 71px;
     padding-left: 60px;
 }
 
 div.jumbotron.multimedia {
     background-image: url('../img/FONDO-MUSICA.jpg');
-    width: 100%;
-    min-height: 50vh;
-    background-size: 100% 100%;
     background-position: center;
+    background-size: 100% 100%;
+    min-height: 50vh;
+    width: 100%;
 }
 
 .black-section {
-    position: relative;
     background-color: rgb(3, 3, 3);
+    position: relative;
 }
 
 .first {
-    width: 100%;
     height: 10vh;
+    width: 100%;
 }
 
 .second {
-    width: 100%;
     height: 40vh;
+    width: 100%;
 }
 
 @keyframes arrow-up-down {
     from {
-        bottom: 20%;
+        bottom: 10%;
     }
     to {
         bottom: 5%;
@@ -243,13 +256,13 @@ div.jumbotron.multimedia {
 }
 
 img.arrow-style {
+    bottom: 5%;
     position: absolute;
     right: 22%;
-    bottom: 5%;
-    animation-name: arrow-up-down;
+    animation-direction: alternate;
     animation-duration: 2s;
     animation-iteration-count: infinite;
-    animation-direction: alternate;
+    animation-name: arrow-up-down;
 }
 
 button.btn.btn-download {
@@ -257,12 +270,12 @@ button.btn.btn-download {
     border-radius: 10px;
     color: white;
     font-size: 25px;
-    text-align: center;
-    padding-top: 1px;
+    margin-top: 13px;
     padding-bottom: 0px;
     padding-left: 20px;
-    margin-top: 13px;
     padding-right: 20px;
+    padding-top: 1px;
+    text-align: center;
     transition: 1s;
 }
 
@@ -280,17 +293,24 @@ button.btn.btn-download:hover {
 }
 
 .logo-nav {
-    /*margin-left: 90%;*/
+    /* margin-left: 90%; */
 }
 
 .nav-cont-style {
     /*
     TO SHOW ROB
      */
-    /*margin-left: 230px;*/
+    /* margin-left: 230px; */
     margin-right: 0;
     position: relative;
     top: 4px;
+}
+
+@media (max-width: 768px) {
+    .navbar-collapse {
+        top: 0;
+        width: 108%;
+    }
 }
 
 .right {
@@ -298,9 +318,9 @@ button.btn.btn-download:hover {
 }
 
 .nav-cont-style-ico {
+    /* margin-right: 5%; */
     position: relative;
     top: 4px;
-    /*margin-right: 5%;*/
 }
 
 .btn-send {
@@ -308,12 +328,12 @@ button.btn.btn-download:hover {
     border-radius: 10px;
     color: white;
     font-size: 25px;
-    text-align: center;
-    padding-top: 1px;
+    margin-top: 13px;
     padding-bottom: 0px;
     padding-left: 20px;
-    margin-top: 13px;
     padding-right: 20px;
+    padding-top: 1px;
+    text-align: center;
 }
 
 .opacity-none {
@@ -321,8 +341,8 @@ button.btn.btn-download:hover {
 }
 
 .v-center {
-    width: 100%;
     position: absolute;
+    width: 100%;
 }
 
 #html5-elem-wrap,
@@ -338,11 +358,19 @@ button.btn.btn-download:hover {
     display: none !important;
 }
 
+.play {
+    opacity: 0.7;
+}
+
+.videoImg:hover .play {
+    opacity: 1;
+}
+
 .play-button {
-    position: absolute;
-    margin-top: 25%;
     margin-bottom: 65px;
+    margin-top: 25%;
     padding-left: 37%;
+    position: absolute;
 }
 
 #youtube-a > img {
@@ -401,6 +429,16 @@ button.btn.btn-download:hover {
         -webkit-filter: initial !important;
     }
 }
+
 .invalid {
-    border:1px solid rgba(243, 2, 2, 0.47) !important;
+    border: 1px solid rgba(243, 2, 2, 0.47) !important;
+}
+
+.navbar-inverse .navbar-collapse,
+.navbar-inverse .navbar-form {
+    background-color: #080808;
+}
+
+.social>li {
+    float: left;
 }

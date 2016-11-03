@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <div id="loading" style="position:fixed;z-index:9999;top:0;bottom:0;left:0;right:0;background:#fff;"></div>
     <div class="col-md-12 col-sm-12 col-xs-12" style="position:fixed;padding:0;z-index:6;border-radius:0px;">
         <nav class="navbar navbar-inverse navbar-style  opacity-none">
             <div class="container-fluid">
@@ -17,8 +18,8 @@
                     <a class="navbar-brand navbar-link" href="#"><img src="img/logo.png" class="logo-nav" style="position:relative;width:180px;height:auto;top:-15px;"></a>
                     <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
                 </div>
-                <div class="collapse navbar-collapse " id="navcol-1">
-                    <ul class="nav navbar-nav nav-cont-style">
+                <div>
+                    <ul id="navcol-1" class="nav navbar-nav nav-cont-style collapse navbar-collapse" style="padding:0;">
                         <li role="presentation"><a href="#home">INICIO </a></li>
                         <li role="presentation"><a href="#bio">BIO </a></li>
                         <li role="presentation"><a href="#music">M&UacuteSICA </a></li>
@@ -26,25 +27,25 @@
                         <li role="presentation"><a href="#videos">VIDEOS </a></li>
                         <li role="presentation"><a href="#contact">CONTACTO </a></li>
                     </ul>
-                    <ul class="nav navbar-nav navbar-right nav-cont-style-ico">
+                    <ul class="nav navbar-nav navbar-right nav-cont-style-ico social" style="float: right;">
                         <li>
                             <a style="padding:10px;" href="https://www.youtube.com/channel/UCbwWYUJMYTphNyz-DPmGU9g" id="youtube-a">
-                              <img style="position:relative;width:30px;height:auto;"  src="img/youtube.png" alt="">
+                                <img style="position:relative;width:30px;height:auto;" src="img/youtube.png" alt="">
                             </a>
                         </li>
                         <li>
                             <a style="padding:10px;" href="https://twitter.com/angelinalavoz" id="tw-a">
-                              <img style="position:relative;width:30px;height:auto;" src="img/tw.png" alt="">
+                                <img style="position:relative;width:30px;height:auto;" src="img/tw.png" alt="">
                             </a>
                         </li>
                         <li>
                             <a style="padding:10px;" href="https://www.facebook.com/angelinalavoz" id="fb-a">
-                              <img style="position:relative;width:30px;height:auto;" src="img/fb.png" alt="">
+                                <img style="position:relative;width:30px;height:auto;" src="img/fb.png" alt="">
                             </a>
                         </li>
                         <li>
                             <a style="padding:10px;" href="https://www.instagram.com/angelinalavoz/" id="ig-a">
-                              <img style="position:relative;width:30px;height:auto;" src="img/ig.png" alt="">
+                                <img style="position:relative;width:30px;height:auto;" src="img/ig.png" alt="">
                             </a>
                         </li>
                     </ul>
@@ -72,27 +73,27 @@
                         </div>
                     </div>
                 </div>
-                            <a href="#bio"><img src="img/ARROW.png" class="arrow-style"></a>
+                <a href="#bio"><img src="img/ARROW.png" class="arrow-style"></a>
             </div>
         </div>
         <div class="section" id="section2">
             <div class="jumbotron bio">
                 <div class="container-fluid">
                     <div class="row m-n">
-                        <div class="col-md-6 col-md-offset-6 h-full top-100">
+                        <div class="col-sm-9 col-sm-offset-3 col-md-7 col-md-offset-5 col-lg-6 col-lg-offset-6 h-full top-100">
                             <div class="animatedParent" data-appear-right-offset="-300">
-                                <p bounceInRight style="text-transform: uppercase !important; font-size: 13px !important; font-family: nexa-b !important; margin-right: 220px;" id="bio-p">
-                                    
-                                María Angelina Galindo Tomasello nació en Maracay el 23 de julio de 1998 hija de Rosa María y Juan Manuel&nbsp;comenzó su carrera artística a los 6 anos de edad participando en la orquesta sinfonica infantil del estado Aragua&nbsp;iniciando estudios en violín y viola, al mismo tiempo realizo estudios en el kínder musical y&nbsp;estudios en todas las aéreas diversas de teoría solfeo y cantoría perteneciente igualmente a la sinfonica infantil.&nbsp;En paralelo participo en el Taller de improvisacion actoral y expresion corporal en el Némesis Teatro A.C. talentos de América.&nbsp;En 2009 contando ya con 10 anos de edad dio inicio a sus estudios vocales en Mayré Martínez Academia de Canto durante el trayecto de 5 anos y&nbsp;obtener su título como cantante profesional.
-                                <br /><br />
-                                <span class="hidden-xs hidden-sm">
-                                    Durante su asistencia en la orquesta sinfonica infantil participo en varios eventos como miembro del coro infante, violín 2 y finalmente viola 1. Para los años 2008, 2010 y 2012 fue participante en el festival encuentro de talentos en&nbsp;la U.E.P. Liceo San José de Cagua, donde curso sus estudios académicos, también estuvo presente en el concurso ÒSolo tu vozÓ de Mayre Martínez&nbsp;academia de canto en sus ediciones &nbsp;IV, IX, X, XI. En el 2011, se presento como telonera en el concierto de la agrupación Òplan BÓ en Maracay,&nbsp;ese mismo ano también participo en el concierto para niños realizado en las ferias de San José.
+                                <p bounceInRight style="text-transform: uppercase !important; font-size: 13px !important; font-family: nexa-b !important;" id="bio-p">
+                                    María Angelina Galindo Tomasello nació en Maracay el 23 de julio de 1998 hija de Rosa María y Juan Manuel&nbsp;comenzó su carrera artística a los 6 anos de edad participando en la orquesta sinfonica infantil del estado Aragua&nbsp;iniciando estudios en violín y viola, al mismo tiempo realizo estudios en el kínder musical y&nbsp;estudios en todas las aéreas diversas de teoría solfeo y cantoría perteneciente igualmente a la sinfonica infantil.&nbsp;En paralelo participo en el Taller de improvisacion actoral y expresion corporal en el Némesis Teatro A.C. talentos de América.&nbsp;En 2009 contando ya con 10 anos de edad dio inicio a sus estudios vocales en Mayré Martínez Academia de Canto durante el trayecto de 5 anos y&nbsp;obtener su título como cantante profesional.
+                                    <br />
+                                    <br />
+                                    Durante su asistencia en la orquesta sinfonica infantil participo en varios eventos como miembro del coro infante, violín 2 y finalmente viola 1. Para los años 2008, 2010 y 2012 fue participante en el festival encuentro de talentos en&nbsp;la U.E.P. Liceo San José de Cagua, donde curso sus estudios académicos, también estuvo presente en el concurso ÒSolo tu vozÓ de Mayre Martínez&nbsp;academia de canto en sus ediciones &nbsp;IV, IX, X, XI. 
+                                    <span class="hidden-xs">
+                                    En el 2011, se presento como telonera en el concierto de la agrupación Òplan BÓ en Maracay,&nbsp;ese mismo ano también participo en el concierto para niños realizado en las ferias de San José.
                                     <br /><br />
                                     Posteriormente, para el 2012 se presento en varios programas matutinos de canales regionales del estado Aragua como TIC TV, TRV y TVS, &nbsp;y en el evento aniversario de la emisora radial Ritmo 96.9fm. Ya para el 2013 participo en el concurso de canto Galería Idol transmitido por Tic TV y en el 2014 participo en el II festival Nuevas Voces evento&nbsp;de Bless Music.
                                     <br /><br />
                                     En el 2015 fue invitada al evento Metro Music 2015, para el mismo año se presento en el programa matutino un Día Diferente transmitido por el canal regional de estado Aragua TRV.&nbsp;
                                 </span>
-                              
                                 </p>
                             </div>
                         </div>
@@ -110,16 +111,16 @@
                                     <div class="album-contents">
                                         <div class="container-fluid">
                                             <div class="row" style="margin-bottom: 20px;color: #b3b3b3;">
-                                                <div class="col-xs-offset-1 col-xs-6 col-sm-4 col-md-offset-2 col-md-2">Tema</div>
+                                                <div class="col-xs-offset-1 col-xs-6 col-sm-4 col-md-offset-2 col-md-3">Tema</div>
                                                 <div class="col-xs-3 hidden-xs">Artista</div>
-                                                <div class="col-xs-2 hidden-xs hidden-sm">Album</div>
+                                                <div class="col-xs-2 hidden-xs hidden-sm hide">Album</div>
                                                 <div class="col-xs-1">Duraci&oacuten</div>
                                                 <div class="col-xs-2"></div>
                                             </div>
                                             <div class="row song-title amplitude-song-container amplitude-play-pause" amplitude-song-index="0">
-                                                <div class="col-xs-offset-1 col-xs-6 col-sm-4 col-md-offset-2 col-md-2">Tu conmigo yo contigo</div>
+                                                <div class="col-xs-offset-1 col-xs-6 col-sm-4 col-md-offset-2 col-md-3">Tu conmigo yo contigo</div>
                                                 <div class="col-xs-3 hidden-xs">Angelina</div>
-                                                <div class="col-xs-2 hidden-xs hidden-sm"></div>
+                                                <div class="col-xs-2 hidden-xs hidden-sm hide"></div>
                                                 <div class="col-xs-1">4:12</div>
                                                 <div class="col-xs-2"></div>
                                             </div>
@@ -270,12 +271,12 @@
                 <div class="container-fluid">
                     <div class="animatedParent v-center" data-appear-right-offset="-300">
                         <div class="row m-n">
-                            <div bounceInLeft class=" col-xs-6 col-md-4"><img class="w-full h-full" src="img/TEXTO-1.png"></div>
+                            <div bounceInLeft class="col-xs-6 col-sm-4 col-sm-offset-1 col-md-4"><img class="w-full h-full" src="img/TEXTO-1.png"></div>
                         </div>
                         <div class="row m-n">
-                            <div bounceInLeft class="col-xs-6 col-md-4">
+                            <div bounceInLeft class="videoImg col-xs-6 col-sm-4 col-sm-offset-1 col-md-4">
                                 <a href="https://www.youtube.com/watch?v=d0jtYsmQz8g" target="_BLANK">
-                                    <img src="img/play-button.png" class="absolute play" style="margin: auto; position: absolute; top: 0; left: 0; bottom: 0; right: 0;">
+                                    <img src="img/play-button.png" class="absolute play" style="margin: auto; position: absolute; top: 0; left: 0; bottom: 0; right: 0;height: 50%;">
                                     <img class="w-full h-full" src="img/VIDEO-MINIATURA.png">
                                 </a>
                             </div>
@@ -285,13 +286,15 @@
             </div>
         </div>
         <div class="section" id="section6">
-            <div id="landing top-60" style="background-image:url(&quot;img/FONDO-CONTACTO.jpg&quot;);background-size:cover;height:100vh;background-position:center;z-index:1;">
+            <div id="landing top-60" style="background-image:url(&quot;img/FONDO-CONTACTO.jpg&quot;);background-size:cover;height:100vh;background-position:35% center;z-index:1;">
                 <div class="container-fluid">
                     <div class="row m-n">
-                        <div class="col-md-6 col-md-offset-6 top-5 h-full col-sm-6 col-sm-offset-5 col-xs-6">
+                        <div class="col-xs-12 col-sm-6 col-sm-offset-5 col-md-6 col-md-offset-6 top-5 h-full">
                             <div class="animatedParent" data-appear-right-offset="-300">
-                                <form id="formContact" method="post" bounceInRight style="margin-top:10%;" action="#contact">
+                                <div class="alert alert-dismissible alert-success hide" style="margin-top: 60px;"></div>
+                                <form id="formContact" method="post" bounceInRight style="margin-top:60px;" action="#contact">
                                     <h2 class="text-center">Contacto</h2>
+                                    <div class="alert alert-dismissible alert-danger hide"></div>
                                     <div class="form-group form-style">
                                         <input class="form-control outline-none" type="text" name="name" placeholder="Name" style="border:transparent;">
                                     </div>
@@ -299,10 +302,10 @@
                                         <input class="form-control outline-none" type="email" name="email" placeholder="Email" style="border:transparent;">
                                     </div>
                                     <div class="form-group form-style">
-                                        <textarea class="form-control outline-none" rows="14" name="message" placeholder="Message" style="color:white; border-radius:0px;border:transparent;"></textarea>
+                                        <textarea class="form-control outline-none" rows="14" name="message" placeholder="Message" style="color:white; border-radius:0px;border:transparent;max-height: 292px;max-width: 100%;"></textarea>
                                     </div>
                                     <div class="for m-group">
-                                        <h2 class="manager-text">Manager +58 414 347 40 75</h2>
+                                        <h2 class="manager-text">Manager <a href="tel:+584143474075" class="text-white">+58 414 347 40 75</a></h2>
                                         <button class="btn btn-send">Enviar</button>
                                     </div>
                                 </form>

@@ -3,7 +3,7 @@ Amplitude.init({
         "name": "Tu conmigo y yo contigo",
         "artist": "Angelina",
         "album": "LOUD",
-        "url": "music/1.mp3",
+        "url": "api/mp3/?file=1",
         "live": false,
         "cover_art_url": "images/cover.png"
     }, {
