@@ -29,7 +29,7 @@
 		$mail->Port = 587;                                    // TCP port to connect to
 
 		$mail->setFrom('contact@angelinamusica.com', $name . ' - AngelinaMusica.com');
-		$mail->addAddress('rockjonathan18@gmail.com', $name);     // Add a recipient
+		$mail->addAddress('angelinalavoz@gmail.com', $name);     // Add a recipient
 		// $mail->addReplyTo('info@example.com', 'Information');
 		
 		$mail->isHTML(true);                                  // Set email format to HTML
