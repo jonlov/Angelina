@@ -13,7 +13,7 @@ module.exports = function (grunt) {
 		'linkAssetsBuildProd',
 		'htmlmin',
 		'phpmin',
-		'hazy:php',
+		// 'hazy:php',
 		'imagemin',
 		// 'uncss',
 		// 'php',

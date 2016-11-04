@@ -248,7 +248,7 @@ div.jumbotron.multimedia {
 
 @keyframes arrow-up-down {
     from {
-        bottom: 10%;
+        bottom: 20%;
     }
     to {
         bottom: 5%;
