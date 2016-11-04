@@ -101,6 +101,12 @@ img.img-responsive.logo {
     }
 }
 
+@media (max-height:608px) {
+    .hidden-400-h {
+        display: none;
+    }
+}
+
 @media (max-width: 498px) {
     #formContact h2 {
         text-align: left;
@@ -164,7 +170,7 @@ div.jumbotron.contact {
     width: 100%;
 }
 
-div.form-group { }
+div.form-group {}
 
 .form-control {
     background-color: rgba(0, 0, 0, 0.47);
@@ -204,6 +210,9 @@ div.form-group { }
         margin-top: 20px;
         /* animation: none !important; */
     }
+    img.arrow-style {
+        animation-name: arrow-up-down-10 !important;
+    }
 }
 
 div.form-group {
@@ -214,7 +223,7 @@ h2.text-center {
     color: white;
     font-size: 30px;
     margin: auto;
-    /*width: 330px;*/
+    /* width: 330px; */
 }
 
 img.img-responsive.enjoy {
@@ -244,6 +253,15 @@ div.jumbotron.multimedia {
 .second {
     height: 40vh;
     width: 100%;
+}
+
+@keyframes arrow-up-down-10 {
+    from {
+        bottom: 10%;
+    }
+    to {
+        bottom: 5%;
+    }
 }
 
 @keyframes arrow-up-down {

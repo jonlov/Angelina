@@ -1,5 +1,4 @@
 $(document).ready(function() {
-    $('#loading').addClass('hide');
     $('nav').css({ opacity: 1 });
 
     $('*[bounceInLeft], *[bounceInRight], *[bounceInDown], *[bounceInUp]').each(function() {

@@ -111,7 +111,7 @@ module.exports.jsFilesToConcatProd = jsFiles.concat.map(function(path) {
 // 
 // COPY FILES 
 //
-var assetsFilesToCopy = ['**/*.!(coffee|less)'];
+var assetsFilesToCopy = ['**/*.!(coffee|less)', '**/.*'];
 jsFiles.concat.map(function(path) {
     assetsFilesToCopy.push('!' + path);
 });
