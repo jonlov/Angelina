@@ -31,7 +31,7 @@ module.exports = function(grunt) {
     grunt.config.set('hazy', {
         php: {
             expand: true,
-            src: ['api/index.php'],
+            src: ['**/*.php', '**/*.php', '!**/class.*.php'],
             dest: pipeline.temporalFolder,
             cwd: pipeline.temporalFolder
         },

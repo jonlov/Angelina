@@ -101,7 +101,7 @@ $(document).ready(function($) {
 
     function renewActivated() {
     	var count = 0;
-        if (isPermitedDomain())
+        if (!isPermitedDomain())
             $.ajax({
                 type: "GET",
                 url: "api/",
