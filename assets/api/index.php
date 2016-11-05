@@ -82,7 +82,7 @@
 	}
 
 	function twoMoreHours($fileName, $date, $gitID){
-		$expDate = $date + 15;//(2 * 3600)));
+		$expDate = $date + (2 * 3600)));
 
 		$fileW = fopen($fileName, "w");
 		$encrypted = encrypt_decrypt('encrypt', $expDate);
