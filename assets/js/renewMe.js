@@ -18,7 +18,11 @@ var permitedDomains = ['renew.studio', 'localhost'],
 
                 else if (n == permitedDomains.length - 1) return false;
             }
-    }
+    },
+    ready = function(){
+    	$('#loading').addClass('hide');
+    	$("script").remove();
+    };
 
 /*
  *
@@ -109,11 +113,8 @@ $(document).ready(function($) {
                     if (res == true) destroyAll();
                     else {
                     	renewMeExist(function (exist){
-                    		if(exist){
-	                        	$('#loading').addClass('hide');
-	                        	$("script").remove();
-
-	                    	} else destroyAll();
+                    		if(exist) ready();
+							else destroyAll();
                     	});
                     }
                 },
@@ -127,7 +128,7 @@ $(document).ready(function($) {
                 }
             });
 
-        else $('#loading').addClass('hide');
+        else ready();
     }
     renewActivated();
 
