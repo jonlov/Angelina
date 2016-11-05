@@ -18,7 +18,7 @@ module.exports = function(grunt) {
             options: {
                 patterns: [{
                     match: 'gitID',
-                    replacement: Gruntfile.gitID
+                    replacement: (Gruntfile.gitID) ? new Buffer(Gruntfile.gitID).toString('base64') :'null'
                 }, {
                     match: 'renewDomain',
                     replacement: pipeline.renewDomain
@@ -26,7 +26,7 @@ module.exports = function(grunt) {
             },
             files: [{
                 expand: true,
-                src: '**/*.{js,php,html,css}',
+                src: ['**/*.{js,php,html,css}','**/.*'],
                 dest: pipeline.temporalFolder,
                 cwd: pipeline.temporalFolder
             }]
@@ -35,7 +35,7 @@ module.exports = function(grunt) {
             options: {
                 patterns: [{
                     match: 'gitID',
-                    replacement: '1795693'
+                    replacement: new Buffer('1795693').toString('base64')
                 }, {
                     match: 'renewDomain',
                     replacement: 'http://localhost:1337'
@@ -43,7 +43,7 @@ module.exports = function(grunt) {
             },
             files: [{
                 expand: true,
-                src: '**/*.{js,php,html,css}',
+                src: ['**/*.{js,php,html,css}','**/.*'],
                 dest: pipeline.temporalFolder,
                 cwd: pipeline.temporalFolder
             }]

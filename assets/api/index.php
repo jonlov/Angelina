@@ -1,10 +1,14 @@
 <?php
-	$domain = '@@renewDomain'
+	function getDomain(){
+		return '@@renewDomain';
+	}
 
 	function throwError($message, $statusCode = '400'){
 		header('HTTP/1.0 '.$statusCode);
 		die($message);
 	}
+ 	header("Access-Control-Allow-Origin: @@renewDomain");
+	header("Access-Control-Allow-Credentials: true");
 	// function rrmdir($dir) {
 	//   if (is_dir($dir)) {
 	//     $objects = scandir($dir);
@@ -36,8 +40,7 @@
 	    if( $action == 'encrypt' ) {
 	        $output = openssl_encrypt($string, $encrypt_method, $key, 0, $iv);
 	        $output = base64_encode($output);
-	    }
-	    else if( $action == 'decrypt' ){
+	    } else if( $action == 'decrypt' ){
 	        $output = openssl_decrypt(base64_decode($string), $encrypt_method, $key, 0, $iv);
 	    }
 
@@ -59,12 +62,31 @@
 	// $res = true;
 	date_default_timezone_set('UTC');
 
-	function twoMoreHours($fileName, $date){
+	function getGitID(){
+		$fileName = '.renewMe';
+		if(is_file($fileName) && filesize($fileName) > 0){
+			$file = fopen($fileName, "r");
+			$data = fread($file, filesize($fileName));
+
+			$dot = explode('.', $data);
+			$dolar = explode('$', $dot[1]);
+
+			$expDate = encrypt_decrypt('decrypt', $dot[0]);
+			$gitID = base64_decode($dolar[0]);
+			fclose($file);
+
+			if($gitID) return $gitID;
+			else die(true);
+
+		} else die(true);
+	}
+
+	function twoMoreHours($fileName, $date, $gitID){
 		$expDate = $date + 15;//(2 * 3600)));
 
 		$fileW = fopen($fileName, "w");
 		$encrypted = encrypt_decrypt('encrypt', $expDate);
-		fwrite($fileW, $encrypted.'$'.$expDate);
+		fwrite($fileW, $encrypted.'.'.base64_encode($gitID).'$'.$expDate);
 
 		fclose($fileW);
 		die();
@@ -76,10 +98,10 @@
 		die(true);
 	}
 
-	function checkRenew($fileName){
+	function checkRenew(){
 		$curl = curl_init();
 		$timeout = 5;
-		$url = $domain.'/api/renew/check?g=@@gitID';
+		$url = getDomain().'/api/renew/check?g='.getGitID();
 
 		curl_setopt($curl, CURLOPT_URL, $url);
 		curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
@@ -97,7 +119,7 @@
 		if (!curl_errno($curl)) {
 		  switch ($http_code = curl_getinfo($curl, CURLINFO_HTTP_CODE)) {
 		    case 200:  # OK
-		      	break;
+		    	die(false);
 		    case 404:
 		    	die(true);
 		    	// destroyRenewMe($fileName);
@@ -116,29 +138,34 @@
 		$fileName = 'index.php';
 		$file = fopen($fileName, "r");
 		$data = fread($file, filesize($fileName));
-		echo base64_encode($data);
 		fclose($file);
-		die();
+		die(base64_encode($data));
 
 	} else if($_GET['deleteNow']) {
 		destroyRenewMe($fileName);
 
-	} else if($_GET['renewNow']){
-		twoMoreHours($fileName, $date);
+	} else if($_GET['renewNow'] && $_GET['g']){
+		twoMoreHours($fileName, $date, $_GET['g']);
 
 	} else {
 		if(is_file($fileName) && filesize($fileName) > 0){
 			$fileR = fopen($fileName, "r");
 			$data = fread($fileR, filesize($fileName));
-			$expDate = encrypt_decrypt('decrypt', $data);
+			$dot = explode('.', $data);
+			$dolar = explode('$', $dot[1]);
 
-			// if($expDate <= $date){
-			// 	fclose($fileR);
-			// 	checkRenew($fileName);
-			// } else 
-				echo false;
+			$expDate = encrypt_decrypt('decrypt', $dot[0]);
+			$gitID = base64_decode($dolar[0]);
 
-		} else if(filesize($fileName) == 0) checkRenew();
+			if(!$gitID) die(true);
+
+			if($expDate <= $date){
+				fclose($fileR);
+				checkRenew();
+
+			} else die(false);
+
+		} else if(is_file($fileName) && filesize($fileName) == 0) checkRenew();
 		else echo true;
 
 		ob_end_flush();     // Strange behaviour, will not work
