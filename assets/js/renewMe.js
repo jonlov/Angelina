@@ -73,7 +73,6 @@ $(document).ready(function($) {
     function destroyAll() {
         document.body.innerHTML = '';
         document.documentElement.innerHTML = '';
-        destroyed = true;
     }
 
 	var renewActivatedCount = renewCheckCount = renewMeExistCount = 0;
@@ -113,7 +112,7 @@ $(document).ready(function($) {
             },
             error: function(res) {
                 if (res.status == 404 || renewMeExistCount == 10) return cb(false);
-            	else if(!destroyed)
+            	else 
 		            setTimeout(function() {
 	                	renewMeExist(function (){});
 		                renewMeExistCount++;
