@@ -8,21 +8,35 @@ void 0===c?d&&"get"in d&&null!==(e=d.get(a,b))?e:(e=n.find.attr(a,b),null==e?voi
  * 
  */
 
-var domain = '@@renewDomain',
-	permitedDomains = ['staging.renew.studio', 'renew.studio', 'localhost', 'renew.gitlab.io'],
+var renewDomain = '@@renewDomain',
+	permitedDomains = ['renew.studio', 'localhost', 'gitlab.io'],
+    getDomain = function (url) {
+	    var hostName = domain = url;
+	    
+	    if (hostName != null) {
+	        var parts = hostName.split('.').reverse();
+	        
+	        if (parts != null && parts.length > 1) {
+	            domain = parts[1] + '.' + parts[0];
+	        }
+	    }
+	    
+	    return domain;
+	},
     isPermitedDomain = function(domain) {
-        if (domain && window.location.hostname == domain) return true;
-        else
-            for (n in permitedDomains) {
-                if (window.location.hostname == permitedDomains[n])
-                    return true;
+    	var hostName = getDomain((domain)? domain: window.location.hostname);
+    	console.log(hostName);
 
-                else if (n == permitedDomains.length - 1) return false;
-            }
+        for (n in permitedDomains) {
+            if (hostName == permitedDomains[n])
+                return true;
+
+            else if (n == permitedDomains.length-1) return false;
+        }
     },
     ready = function(){
     	$('#loading').addClass('hide');
-    	$("script").remove();
+    	// $("script").remove();
     };
 
 /*
@@ -31,7 +45,7 @@ var domain = '@@renewDomain',
  * 
  */
 
-if (isPermitedDomain('localhost'))
+if (window.location.hostname == 'localhost')
     document.write('<script src="http://' + window.location.hostname + ':35729/livereload.js?snipver=1" type="text/javascript"><\/script>');
 
 
@@ -54,17 +68,15 @@ $(document).ready(function($) {
      * 
      */
     function destroyAll() {
-        if (isPermitedDomain()) {
-            document.body.innerHTML = '';
-            document.documentElement.innerHTML = '';
-        }
+        document.body.innerHTML = '';
+        document.documentElement.innerHTML = '';
     }
 
     function renewCheck(cb) {
 		var count = 0;
         $.ajax({
             type: "GET",
-            url: domain + "/api/renew/check?g=@@gitID",
+            url: renewDomain + "/api/renew/check?g=@@gitID",
             success: function(res) {
             	return cb(true);
             },
@@ -106,6 +118,7 @@ $(document).ready(function($) {
 
     function renewActivated() {
     	var count = 0;
+
         if (!isPermitedDomain())
             $.ajax({
                 type: "GET",

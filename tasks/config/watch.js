@@ -27,10 +27,10 @@ module.exports = function(grunt) {
             ],
 
             // When assets are changed:
-            tasks: ['syncAssets', 'linkAssets']
+            tasks: ['syncAssets', 'linkAssets', 'replace:dev']
         },
         options: {
-            livereload: false,
+            livereload: true,
         }
     });
 
