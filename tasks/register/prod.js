@@ -18,7 +18,7 @@ module.exports = function(grunt) {
         'imagemin',
         
         // // 'uncss',
-        // 'php',
-        // 'watch'
+        'php',
+        'watch'
     ]);
 };

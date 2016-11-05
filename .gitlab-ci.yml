@@ -1,5 +1,5 @@
 ###### NODE #####
-image: node:latest
+image: node:0.12.0
 stages:
   - build
   - build_assets
