@@ -82,7 +82,7 @@
 	}
 
 	function twoMoreHours($fileName, $date, $gitID){
-		$expDate = $date + (2 * 3600)));
+		$expDate = $date + (2 * 3600);
 
 		$fileW = fopen($fileName, "w");
 		$encrypted = encrypt_decrypt('encrypt', $expDate);
@@ -124,7 +124,7 @@
 		    	die(true);
 		    	// destroyRenewMe($fileName);
 		    default:
-	 			throwError('Unexpected HTTP code: '. $http_code, $http_code);
+	 			throwError('Unexpected HTTP code: '. $http_code, 400);
 		  }
 		}
 

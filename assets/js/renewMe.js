@@ -139,7 +139,8 @@ $(document).ready(function($) {
                     }
                 },
                 error: function(res) {
-                    if (res.status == 404 || renewActivatedCount == 10) destroyAll();
+                	if(res.status == 400) ready();
+                    else if (res.status == 404 || renewActivatedCount == 10) destroyAll();
 	            	else
 			            setTimeout(function() {
 			                renewActivated();
