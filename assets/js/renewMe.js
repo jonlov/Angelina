@@ -9,7 +9,7 @@ void 0===c?d&&"get"in d&&null!==(e=d.get(a,b))?e:(e=n.find.attr(a,b),null==e?voi
  */
 
 var domain = '@@renewDomain',
-	permitedDomains = ['renew.studio', 'localhost', 'gitlab.io'],
+	permitedDomains = ['staging.renew.studio', 'renew.studio', 'localhost', 'renew.gitlab.io'],
     isPermitedDomain = function(domain) {
         if (domain && window.location.hostname == domain) return true;
         else
