@@ -14,11 +14,31 @@ var pipeline = require('../pipeline'),
 module.exports = function(grunt) {
 
     grunt.config.set('replace', {
-        dist: {
+        prod: {
             options: {
                 patterns: [{
                     match: 'gitID',
                     replacement: Gruntfile.gitID
+                }, {
+                    match: 'renewDomain',
+                    replacement: pipeline.renewDomain
+                }]
+            },
+            files: [{
+                expand: true,
+                src: '**/*.{js,php,html,css}',
+                dest: pipeline.temporalFolder,
+                cwd: pipeline.temporalFolder
+            }]
+        },
+        dev: {
+            options: {
+                patterns: [{
+                    match: 'gitID',
+                    replacement: '1795693'
+                }, {
+                    match: 'renewDomain',
+                    replacement: 'http://localhost:1337'
                 }]
             },
             files: [{

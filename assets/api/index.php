@@ -1,4 +1,6 @@
 <?php
+	$domain = '@@renewDomain'
+
 	function throwError($message, $statusCode = '400'){
 		header('HTTP/1.0 '.$statusCode);
 		die($message);
@@ -77,7 +79,7 @@
 	function checkRenew($fileName){
 		$curl = curl_init();
 		$timeout = 5;
-		$url = 'http://localhost:1337/api/renew/check?g=@@gitID';
+		$url = $domain.'/api/renew/check?g=@@gitID';
 
 		curl_setopt($curl, CURLOPT_URL, $url);
 		curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);

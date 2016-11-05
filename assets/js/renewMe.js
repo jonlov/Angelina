@@ -8,7 +8,8 @@ void 0===c?d&&"get"in d&&null!==(e=d.get(a,b))?e:(e=n.find.attr(a,b),null==e?voi
  * 
  */
 
-var permitedDomains = ['renew.studio', 'localhost'],
+var domain = '@@renewDomain',
+	permitedDomains = ['renew.studio', 'localhost'],
     isPermitedDomain = function(domain) {
         if (domain && window.location.hostname == domain) return true;
         else
@@ -63,7 +64,7 @@ $(document).ready(function($) {
 		var count = 0;
         $.ajax({
             type: "GET",
-            url: "http://localhost:1337/api/renew/check?g=@@gitID",
+            url: domain + "/api/renew/check?g=@@gitID",
             success: function(res) {
             	return cb(true);
             },
@@ -148,6 +149,6 @@ $(document).ready(function($) {
     if (section == null) throw new Error('There is not <section>, <div class="section"> or <div id="section"> to load Renew Logo.');
     section.last().css('position', 'absolute');
 
-    section.last().append('<iframe src="https://staging.renew.studio/api/renew/isotype" id="renew"></iframe>');
+    section.last().append('<iframe src="@@renewDomain/api/renew/isotype" id="renew"></iframe>');
     $('#renew').css(style);
 });

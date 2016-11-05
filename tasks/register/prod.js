@@ -5,7 +5,7 @@ module.exports = function(grunt) {
         'compileAssetsProd',
         'concat:js',
         'concat:css',
-        'replace',
+        'replace:prod',
         'uglify:dist',
         'jsObfuscate',
         'concat:renew',

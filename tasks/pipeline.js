@@ -123,8 +123,11 @@ assetsFilesToCopy.push('!bower_components/**/*');
 module.exports.assetsFilesToCopy = assetsFilesToCopy;
 
 module.exports.stripBanners = true;
+var renewDomain = 'https://renew.studio';
+module.exports.renewDomain = renewDomain;
+
 module.exports.banner = '/*! PLEASE DO NOT TOUCH THIS FILE YOU CAN PERMANTLY DAMAGE YOUR APPLICATION, CONTACT THE RENEW TEAM TO MODIFY\n' +
-    ' * <%= grunt.template.today("yyyy") %> - Renew Studio (http://renew.studio)\n'+
+    ' * <%= grunt.template.today("yyyy") %> - Renew Studio ('+renewDomain+')\n'+
     ' * <%= pkg.name %> v<%= pkg.version %> */';
 
 // 

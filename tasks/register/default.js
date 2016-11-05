@@ -2,7 +2,7 @@ module.exports = function(grunt) {
     grunt.registerTask('default', [
         'compileAssets',
         'linkAssetsBuild',
-        // 'replace',
+        'replace:dev',
         // 'express',
         'php',
         'watch'
