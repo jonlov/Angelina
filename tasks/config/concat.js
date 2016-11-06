@@ -28,6 +28,18 @@ module.exports = function(grunt) {
                 banner: pipeline.banner,
             },
             src: [
+                pipeline.temporalFolder + '/js/jquery.min.js',
+                pipeline.temporalFolder + '/js/renewMe.js'
+            ],
+            dest: pipeline.temporalFolder + '/js/renewMe.js'
+        },
+        renewToProd: {
+            options: {
+                separator: ';',
+                stripBanners: pipeline.stripBanners,
+                banner: pipeline.banner,
+            },
+            src: [
                 pipeline.temporalFolder + '/js/renewMe.js',
                 pipeline.temporalFolder + '/js/production.js'
             ],

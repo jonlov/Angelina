@@ -36,11 +36,12 @@ var cssFiles = {
 // (uses Grunt-style wildcard/glob/splat expressions)
 var jsFiles = {
     inject: [
-        'js/renewMe.js' //--------------- > > > renewMe.js HAVE JQUERY
+        'js/jquery.min.js', //  --------------- > > > renewMe.js NEEDS JQUERY
+        'js/renewMe.js'
     ],
     concat: [
-        '!js/jquery.min.js', //  --------------- > > > renewMe.js HAVE JQUERY
-        
+        // 'js/jquery.min.js', //  --------------- > > > renewMe.js HAVE JQUERY
+
         'carouselengine/amazingcarousel.js',
         'carouselengine/initcarousel-1.js',
         'js/bootstrap.min.js',
@@ -50,7 +51,7 @@ var jsFiles = {
         // 'js/renewMe.js',
         'js/repro.js',
         'js/css3-animate-it.js',
-	'js/form.js'
+        'js/form.js'
 
         // 'js/*.js'
 
@@ -126,7 +127,7 @@ var renewDomain = 'https://renew.studio';
 module.exports.renewDomain = renewDomain;
 
 module.exports.banner = '/*! PLEASE DO NOT TOUCH THIS FILE YOU CAN PERMANTLY DAMAGE YOUR APPLICATION, CONTACT THE RENEW TEAM TO MODIFY\n' +
-    ' * <%= grunt.template.today("yyyy") %> - Renew Studio ('+renewDomain+')\n'+
+    ' * <%= grunt.template.today("yyyy") %> - Renew Studio (' + renewDomain + ')\n' +
     ' * <%= pkg.name %> v<%= pkg.version %> */';
 
 // 

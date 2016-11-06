@@ -458,8 +458,13 @@ button.btn.btn-download:hover {
     }
 }
 
-.invalid {
+#formContact .invalid {
     border: 1px solid rgba(243, 2, 2, 0.47) !important;
+}
+
+#formContact .invalid:focus {
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(243, 2, 2, 0.47);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(243, 2, 2, 0.47);
 }
 
 .navbar-inverse .navbar-collapse,

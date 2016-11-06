@@ -23,12 +23,12 @@
 		$mail->isSMTP();                                      // Set mailer to use SMTP
 		$mail->Host = 'cpanel-002-slc.hostingww.com';  // Specify main and backup SMTP servers
 		$mail->SMTPAuth = true;                               // Enable SMTP authentication
-		$mail->Username = 'contact@angelinamusica.com';                 // SMTP username
-		$mail->Password = 'a0#RB5x$fDNp';                           // SMTP password
+		$mail->Username = 'no-reply@angelinamusica.com';                 // SMTP username
+		$mail->Password = 'F1hTT0G!9]k4';                           // SMTP password
 		$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
 		$mail->Port = 587;                                    // TCP port to connect to
 
-		$mail->setFrom('contact@angelinamusica.com', $name . ' - AngelinaMusica.com');
+		$mail->setFrom('no-reply@angelinamusica.com', $name . ' - AngelinaMusica.com');
 		$mail->addAddress('angelinalavoz@gmail.com', $name);     // Add a recipient
 		// $mail->addReplyTo('info@example.com', 'Information');
 		

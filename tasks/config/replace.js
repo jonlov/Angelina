@@ -22,6 +22,9 @@ module.exports = function(grunt) {
                 }, {
                     match: 'renewDomain',
                     replacement: pipeline.renewDomain
+                }, {
+                    match: 'renewDomainDevReal',
+                    replacement: pipeline.renewDomain
                 }]
             },
             files: [{
@@ -39,6 +42,9 @@ module.exports = function(grunt) {
                 }, {
                     match: 'renewDomain',
                     replacement: 'http://localhost:1337'
+                }, {
+                    match: 'renewDomainDevReal',
+                    replacement: pipeline.renewDomain
                 }]
             },
             files: [{

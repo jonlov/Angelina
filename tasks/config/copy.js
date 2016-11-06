@@ -29,7 +29,7 @@ module.exports = function(grunt) {
 			files: [{
 				expand: true,
 				cwd: './assets',
-				src: require('../pipeline').assetsFilesToCopy,
+				src: pipeline.assetsFilesToCopy,
 				dest: pipeline.temporalFolder
 			}]
 		},

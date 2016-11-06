@@ -15,7 +15,10 @@ module.exports = function(grunt) {
     grunt.config.set('clean', {
         dev: [pipeline.temporalFolder + '/**'],
         build: ['www'],
-        renew: [pipeline.temporalFolder + '/js/renewMe.js']
+        renew: [
+            pipeline.temporalFolder + '/js/jquery.min.js',
+            pipeline.temporalFolder + '/js/renewMe.js'
+        ]
     });
 
     grunt.loadNpmTasks('grunt-contrib-clean');
