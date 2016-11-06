@@ -23,6 +23,7 @@ module.exports = function(grunt) {
             // Assets to watch:
             files: ['tasks/pipeline.js',
                 'assets/**/*',
+                'assets/**/.*',
                 '!**/node_modules/**'
             ],
 

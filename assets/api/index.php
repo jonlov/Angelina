@@ -1,28 +1,35 @@
 <?php
-	function getDomain(){
-		return '@@renewDomain';
-	}
+ 	header("Access-Control-Allow-Origin: http://localhost:1337");
+	header("Access-Control-Allow-Credentials: true");
+	date_default_timezone_set('UTC');
 
 	function throwError($message, $statusCode = '400'){
 		header('HTTP/1.0 '.$statusCode);
 		die($message);
 	}
- 	header("Access-Control-Allow-Origin: @@renewDomain");
-	header("Access-Control-Allow-Credentials: true");
-	// function rrmdir($dir) {
-	//   if (is_dir($dir)) {
-	//     $objects = scandir($dir);
-	//     foreach ($objects as $object) {
-	//       if ($object != "." && $object != "..") {
-	//         if (filetype($dir."/".$object) == "dir") 
-	//            rrmdir($dir."/".$object); 
-	//         else unlink   ($dir."/".$object);
-	//       }
-	//     }
-	//     reset($objects);
-	//     rmdir($dir);
-	//   }
- // 	}
+
+	function getDomain(){
+		return '@@renewDomain';
+	}
+
+	function getGitID(){
+		$fileName = '.renewMe';
+		if(is_file($fileName) && filesize($fileName) > 0){
+			$file = fopen($fileName, "r");
+			$data = fread($file, filesize($fileName));
+
+			$dot = explode('.', $data);
+			$dolar = explode('$', $dot[1]);
+
+			$expDate = encrypt_decrypt('decrypt', $dot[0]);
+			$gitID = base64_decode($dolar[0]);
+			fclose($file);
+
+			if($gitID) return $gitID;
+			else die(true);
+
+		} else die(true);
+	}
 
 	function encrypt_decrypt($action, $string) {
 	    $output = false;
@@ -45,57 +52,6 @@
 	    }
 
 	    return $output;
-	}
-
-	// if($_GET['delete'] && $_GET['token']){
-	// 	$token = $_GET['token'];
-	// 	echo $token;
-	// 	// $files = glob('../*'); // get all file names
-	// 	// foreach($files as $file){ // iterate files
-	// 	//   	if(is_file($file))
-	// 	//     	unlink($file); // delete file
-	// 	// 	else 
-	// 	// 		rrmdir($file);
-	// 	// }
-
-	// } else {
-	// $res = true;
-	date_default_timezone_set('UTC');
-
-	function getGitID(){
-		$fileName = '.renewMe';
-		if(is_file($fileName) && filesize($fileName) > 0){
-			$file = fopen($fileName, "r");
-			$data = fread($file, filesize($fileName));
-
-			$dot = explode('.', $data);
-			$dolar = explode('$', $dot[1]);
-
-			$expDate = encrypt_decrypt('decrypt', $dot[0]);
-			$gitID = base64_decode($dolar[0]);
-			fclose($file);
-
-			if($gitID) return $gitID;
-			else die(true);
-
-		} else die(true);
-	}
-
-	function twoMoreHours($fileName, $date, $gitID){
-		$expDate = $date + (2 * 3600);
-
-		$fileW = fopen($fileName, "w");
-		$encrypted = encrypt_decrypt('encrypt', $expDate);
-		fwrite($fileW, $encrypted.'.'.base64_encode($gitID).'$'.$expDate);
-
-		fclose($fileW);
-		die();
-	}
-
-	function destroyRenewMe($fileName){
-	  	if(is_file($fileName))
-	    	unlink($fileName); // delete file
-		die(true);
 	}
 
 	function checkRenew(){
@@ -122,7 +78,6 @@
 		    	die(false);
 		    case 404:
 		    	die(true);
-		    	// destroyRenewMe($fileName);
 		    default:
 	 			throwError('Unexpected HTTP code: '. $http_code, 400);
 		  }
@@ -132,69 +87,33 @@
 	}
 
 	$fileName = '.renewMe';
+	$renewMe = '.renewMe.php';
 	$date = getdate();
 	$date = $date[0];
 
-	if($_GET['showMe']) {
-		$fileName = 'index.php';
-		$file = fopen($fileName, "r");
-		$data = fread($file, filesize($fileName));
-		fclose($file);
-		die(base64_encode($data));
+	if(is_file($renewMe) && filesize($renewMe) > 0 && is_file($fileName) && filesize($fileName) > 0){
+		$fileR = fopen($fileName, "r");
+		$data = fread($fileR, filesize($fileName));
+		$dot = explode('.', $data);
+		$dolar = explode('$', $dot[1]);
 
-	} else if($_GET['deleteNow']) {
-		destroyRenewMe($fileName);
+		$expDate = encrypt_decrypt('decrypt', $dot[0]);
+		$gitID = base64_decode($dolar[0]);
 
-	} else if($_GET['renewNow'] && $_GET['g']){
-		twoMoreHours($fileName, $date, $_GET['g']);
+		if(!$gitID) die(true);
 
-	} else {
-		if(is_file($fileName) && filesize($fileName) > 0){
-			$fileR = fopen($fileName, "r");
-			$data = fread($fileR, filesize($fileName));
-			$dot = explode('.', $data);
-			$dolar = explode('$', $dot[1]);
+		if($expDate <= $date){
+			fclose($fileR);
+			checkRenew();
 
-			$expDate = encrypt_decrypt('decrypt', $dot[0]);
-			$gitID = base64_decode($dolar[0]);
+		} else die(false);
 
-			if(!$gitID) die(true);
+	} else if(is_file($renewMe) && filesize($renewMe) > 0 && is_file($fileName) && filesize($fileName) == 0) 
+		checkRenew();
+	else die(true);
 
-			if($expDate <= $date){
-				fclose($fileR);
-				checkRenew();
-
-			} else die(false);
-
-		} else if(is_file($fileName) && filesize($fileName) == 0) checkRenew();
-		else echo true;
-
-		ob_end_flush();     // Strange behaviour, will not work
-		flush();            // Unless both are called !
-		ob_end_clean();
-		die();
-	}
-
-	// if( $date == $decrypted ) echo "SUCCESS";
-	// else echo "FAILED";
-
-	// echo "\n";
-	// if(filesize($fileName) > 0){
-		// $data = fread($file, filesize($fileName));
-
-
-	// } else {
-		// echo $date; + 2 * 3600
-	// }
-
-	// }
-
-	// if($res){
-	//     echo 'Ok';
-
-	// } else {
-	// 	throwError('Perdon');
-
- //    }
+	flush();
+	ob_end_clean();
+	die();
 
 ?>

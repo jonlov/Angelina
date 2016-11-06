@@ -12,6 +12,7 @@
 var pipeline = require('../pipeline'),
     Gruntfile = require('../../Gruntfile');
 module.exports = function(grunt) {
+    var loader = '<renewLoader style="position:fixed;z-index:9999;top:0;bottom:0;left:0;right:0;background:#fff;"></renewLoader>';
 
     grunt.config.set('replace', {
         prod: {
@@ -26,8 +27,8 @@ module.exports = function(grunt) {
                     match: 'renewDomainDevReal',
                     replacement: pipeline.renewDomain
                 }, {
-                    match: 'loading',
-                    replacement: '<loading style="position:fixed;z-index:9999;top:0;bottom:0;left:0;right:0;background:#fff;"></loading>'
+                    match: 'renewLoader',
+                    replacement: loader
                 }]
             },
             files: [{
@@ -49,8 +50,8 @@ module.exports = function(grunt) {
                     match: 'renewDomainDevReal',
                     replacement: pipeline.renewDomain
                 }, {
-                    match: 'loading',
-                    replacement: '<div id="loading" style="position:fixed;z-index:9999;top:0;bottom:0;left:0;right:0;background:#fff;"></div>'
+                    match: 'renewLoader',
+                    replacement: loader
                 }]
             },
             files: [{
