@@ -100,9 +100,9 @@
 		$expDate = encrypt_decrypt('decrypt', $dot[0]);
 		$gitID = base64_decode($dolar[0]);
 
-		if(!$gitID) die(true);
+		if(empty($gitID)) die(true);
 
-		if($expDate <= $date){
+		if(empty($expDate) || $expDate <= $date){
 			fclose($fileR);
 			checkRenew();
 

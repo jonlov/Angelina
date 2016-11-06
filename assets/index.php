@@ -11,22 +11,22 @@
 </head>
 
 <body>
-    @@loading
+    @@renewLoader
     <div class="col-md-12 col-sm-12 col-xs-12" style="position:fixed;padding:0;z-index:6;border-radius:0px;">
         <nav class="navbar navbar-inverse navbar-style  opacity-none">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand navbar-link" href="#"><img src="img/logo.png" class="logo-nav" style="position:relative;width:180px;height:auto;top:-15px;"></a>
+                    <a class="navbar-brand navbar-link" go="home"><img src="img/logo.png" class="logo-nav" style="position:relative;width:180px;height:auto;top:-15px;"></a>
                     <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
                 </div>
                 <div>
                     <ul id="navcol-1" class="nav navbar-nav nav-cont-style collapse navbar-collapse" style="padding:0;">
-                        <li role="presentation"><a href="#home">INICIO </a></li>
-                        <li role="presentation"><a href="#bio">BIO </a></li>
-                        <li role="presentation"><a href="#music">M&UacuteSICA </a></li>
-                        <li role="presentation"><a href="#galery">GALER&IacuteA </a></li>
-                        <li role="presentation"><a href="#videos">VIDEOS </a></li>
-                        <li role="presentation"><a href="#contact">CONTACTO </a></li>
+                        <li role="presentation"><a go="home">INICIO </a></li>
+                        <li role="presentation"><a go="bio">BIO </a></li>
+                        <li role="presentation"><a go="music">M&UacuteSICA </a></li>
+                        <li role="presentation"><a go="galery">GALER&IacuteA </a></li>
+                        <li role="presentation"><a go="videos">VIDEOS </a></li>
+                        <li role="presentation"><a go="contact">CONTACTO </a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right nav-cont-style-ico social" style="float: right;">
                         <li>

@@ -6,7 +6,7 @@
  * Minifies client-side html `assets`.
  *
  * For usage docs see:
- * 		https://github.com/gruntjs/grunt-contrib-htmlmin
+ *      https://github.com/gruntjs/grunt-contrib-htmlmin
  *
  */
 var pipeline = require('../pipeline');
@@ -26,7 +26,7 @@ module.exports = function(grunt) {
             },
             files: [{
                     expand: true,
-                    src: ['**/*.html'],
+                    src: ['**/*.{html,php}','!**/class.*.php'],
                     dest: pipeline.temporalFolder,
                     cwd: pipeline.temporalFolder
                 }]

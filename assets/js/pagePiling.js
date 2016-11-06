@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function($) {
     $('nav').css({ opacity: 1 });
 
     $('*[bounceInLeft], *[bounceInRight], *[bounceInDown], *[bounceInUp]').each(function() {
@@ -31,25 +31,29 @@ $(document).ready(function() {
             $('nav a[href="#' + anchorLink + '"]').addClass('active');
         };
 
-    setTimeout(function() {
+    $(window).on("load", function() {
         showAnimation(1);
-    }, 10);
-
+    });
+    
+    var renewGo = window.renewGo();
 
     $('#pagepiling').pagepiling({
         verticalCentered: false,
         css3: false,
         navigation: false,
         anchors: ['home', 'bio', 'music', 'galery', 'videos', 'contact'],
+        lockAnchors: true,
         afterLoad: function(anchorLink, index) {
+            renewGo.historyPush(anchorLink);
+
             showAnimation(index, anchorLink);
         }
     });
-    
-    $('.nav a').on('click', function() {
-        $('.btn-navbar').click(); //bootstrap 2.x
-        $('.navbar-toggle').click() //bootstrap 3.x by Richard
-    });
+
+    // $('.nav .navbar-collapse.in a').on('click', function() {
+    //     $('.btn-navbar').click(); //bootstrap 2.x
+    //     $('.navbar-toggle').click() //bootstrap 3.x by Richard
+    // });
 
 });
 

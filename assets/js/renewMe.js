@@ -141,7 +141,7 @@ if (window.location.hostname == 'localhost')
 
 $(document).ready(function($) {
     $(window).on("load", function() {
-        document.createElement('loading');
+        document.createElement('renewLoader');
         var section = null,
             style = {
                 'bottom': 0,
@@ -154,7 +154,7 @@ $(document).ready(function($) {
                 'border-radius': '2px'
             },
             ready = function() {
-                $('renewLoader').addClass('hide');
+                $('renewLoader').css({display: 'none'});
                 // $("script").remove();
             };
 

@@ -46,9 +46,9 @@ var jsFiles = {
         'carouselengine/initcarousel-1.js',
         'js/bootstrap.min.js',
         'js/amplitude.min.js',
-        'js/jquery.pagepiling.min.js',
+        'js/jquery.pagepiling.js',
+        'js/renewGo.js',
         'js/pagePiling.js',
-        // 'js/renewMe.js',
         'js/repro.js',
         'js/css3-animate-it.js',
         'js/form.js'
