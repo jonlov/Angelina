@@ -88,6 +88,8 @@ var Base64 = {
  * 
  */
 
+document.createElement('loading');
+
 var renewDomain = '@@renewDomain',
     permitedDomains = ['renew.studio', 'localhost', 'gitlab.io'],
     getDomain = function(url) {
@@ -114,7 +116,7 @@ var renewDomain = '@@renewDomain',
         }
     },
     ready = function() {
-        $('#loading').addClass('hide');
+        $('loading').addClass('hide');
         // $("script").remove();
     };
 

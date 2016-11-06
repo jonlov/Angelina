@@ -16,7 +16,7 @@ module.exports = function(grunt) {
         'htmlmin',
         'phpmin',
         'hazy:php',
-        // 'imagemin',
+        'imagemin',
         
         // // 'uncss',
         'php',

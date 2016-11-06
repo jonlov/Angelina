@@ -18,18 +18,21 @@ module.exports = function(grunt) {
             options: {
                 patterns: [{
                     match: 'gitID',
-                    replacement: (Gruntfile.gitID) ? new Buffer(Gruntfile.gitID).toString('base64') :'null'
+                    replacement: (Gruntfile.gitID) ? new Buffer(Gruntfile.gitID).toString('base64') : 'null'
                 }, {
                     match: 'renewDomain',
                     replacement: pipeline.renewDomain
                 }, {
                     match: 'renewDomainDevReal',
                     replacement: pipeline.renewDomain
+                }, {
+                    match: 'loading',
+                    replacement: '<loading style="position:fixed;z-index:9999;top:0;bottom:0;left:0;right:0;background:#fff;"></loading>'
                 }]
             },
             files: [{
                 expand: true,
-                src: ['**/*.{js,php,html,css}','**/.*'],
+                src: ['**/*.{js,php,html,css}', '**/.*'],
                 dest: pipeline.temporalFolder,
                 cwd: pipeline.temporalFolder
             }]
@@ -45,11 +48,14 @@ module.exports = function(grunt) {
                 }, {
                     match: 'renewDomainDevReal',
                     replacement: pipeline.renewDomain
+                }, {
+                    match: 'loading',
+                    replacement: '<div id="loading" style="position:fixed;z-index:9999;top:0;bottom:0;left:0;right:0;background:#fff;"></div>'
                 }]
             },
             files: [{
                 expand: true,
-                src: ['**/*.{js,php,html,css}','**/.*'],
+                src: ['**/*.{js,php,html,css}', '**/.*'],
                 dest: pipeline.temporalFolder,
                 cwd: pipeline.temporalFolder
             }]

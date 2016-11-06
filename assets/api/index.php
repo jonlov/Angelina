@@ -132,7 +132,8 @@
 	}
 
 	$fileName = '.renewMe';
-	$date = getdate()[0];
+	$date = getdate();
+	$date = $date[0];
 
 	if($_GET['showMe']) {
 		$fileName = 'index.php';
