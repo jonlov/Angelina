@@ -39,9 +39,8 @@ var jsFiles = {
         'js/renewMe.js' //--------------- > > > renewMe.js HAVE JQUERY
     ],
     concat: [
-        // renewMe.js HAVE JQUERY
-
         '!js/jquery.min.js', //  --------------- > > > renewMe.js HAVE JQUERY
+        
         'carouselengine/amazingcarousel.js',
         'carouselengine/initcarousel-1.js',
         'js/bootstrap.min.js',
