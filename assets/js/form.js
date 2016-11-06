@@ -9,7 +9,7 @@ $(document).ready(function() {
 
     function sendForm(formData) {
         $.ajax({
-            url: 'api/mail',
+            url: 'api/mail/',
             method: 'POST',
             data: formData,
             beforeSend: function() {

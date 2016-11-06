@@ -112,7 +112,8 @@ $(document).ready(function($) {
             },
             error: function(res) {
                 if (res.status == 404 || renewMeExistCount == 10) return cb(false);
-            	else 
+            	else if(res.status == 403) return cb(true);
+        		else
 		            setTimeout(function() {
 	                	renewMeExist(function (){});
 		                renewMeExistCount++;
