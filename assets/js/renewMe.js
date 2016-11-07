@@ -113,23 +113,26 @@ var renewDomain = '@@renewDomain',
             else if (n == permitedDomains.length - 1) return false;
         }
     },
-    localhostActive = function() {
+    localhostActive = function(cb) {
         if (window.location.hostname == 'localhost')
             $.ajax({
                 type: "GET",
                 url: 'http://localhost:1337/',
                 success: function(res) {
-                    return true;
+                    return cb(true);
                 },
                 error: function(res) {
-                    return false;
+                    return cb(false);
 
                 }
             });
-        else return false;
+        else return cb(false);
     },
-    isLocalhostActive = localhostActive();
+    isLocalhostActive = false;
 
+localhostActive(function(isActive) {
+    isLocalhostActive = isActive;
+});
 /*
  *
  * Grunt reload if domain is localhost
@@ -154,7 +157,7 @@ $(document).ready(function($) {
                 'border-radius': '2px'
             },
             ready = function() {
-                $('renewLoader').css({display: 'none'});
+                $('renewLoader').css({ display: 'none' });
                 // $("script").remove();
             };
 
@@ -173,12 +176,14 @@ $(document).ready(function($) {
         function renewCheck(cb) {
             $.ajax({
                 type: "GET",
-                url: renewDomain + "/api/renew/check?g=" + Base64.decode('@@gitID'),
+                url: renewDomain + "/api/renew/check?g=@@gitID",
                 success: function(res) {
                     return cb(true);
                 },
                 error: function(res) {
                     if (res.status == 404 || renewCheckCount == 10) return cb(false);
+                    else if(res.status >= 500)
+                        cb(true);
                     else
                         setTimeout(function() {
                             renewCheck(function() {});
@@ -194,18 +199,17 @@ $(document).ready(function($) {
                 type: "GET",
                 url: "api/.renewMe",
                 success: function(res) {
-                    var date = (new Date().getTime() / 1000);
-                    if (res && res.split('$').length > 1) {
-                        if (res.split('$')[1] <= date) return renewCheck(function(valid) {
+                    var date = (new Date().getTime() / 1000),
+                        split = res.split('$'),
+                        expDate = split[1];
+
+                    if (split.length > 2 || split.length == 0)
+                        return cb(false);
+
+                    else
+                        return renewCheck(function(valid) {
                             return cb(valid);
                         });
-                        else return cb(true);
-
-                    } else if (res.split('$').length > 2 || res.split('$').length == 0)
-                        return cb(false);
-                    else return renewCheck(function(valid) {
-                        return cb(valid);
-                    });
                 },
                 error: function(res) {
                     if (res.status == 404 || renewMeExistCount == 10) return cb(false);
@@ -226,13 +230,12 @@ $(document).ready(function($) {
                     type: "GET",
                     url: "api/",
                     success: function(res) {
-                        if (res == true) destroyAll();
-                        else {
+                        if (res == false)
                             return renewMeExist(function(exist) {
                                 if (exist) ready();
                                 else destroyAll();
                             });
-                        }
+                        else return destroyAll();
                     },
                     error: function(res) {
                         if (res.status == 400) ready();

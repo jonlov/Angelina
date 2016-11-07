@@ -1,15 +1,15 @@
 <?php
- 	header("Access-Control-Allow-Origin: http://localhost:1337");
+	function getDomain(){
+		return '@@renewDomain';
+	}
+
+ 	header("Access-Control-Allow-Origin: ".getDomain());
 	header("Access-Control-Allow-Credentials: true");
 	date_default_timezone_set('UTC');
 
 	function throwError($message, $statusCode = '400'){
 		header('HTTP/1.0 '.$statusCode);
 		die($message);
-	}
-
-	function getDomain(){
-		return '@@renewDomain';
 	}
 
 	function getGitID(){
@@ -21,12 +21,13 @@
 			$dot = explode('.', $data);
 			$dolar = explode('$', $dot[1]);
 
-			$expDate = encrypt_decrypt('decrypt', $dot[0]);
-			$gitID = base64_decode($dolar[0]);
+			$expDate = encrypt_decrypt('decrypt', base64_decode($dot[0]));
+			$gitID = $dolar[0];
 			fclose($file);
 
-			if($gitID) return $gitID;
-			else die(true);
+			if(empty($gitID)) 
+				return throwError('',404);
+			else return $gitID;
 
 		} else die(true);
 	}
@@ -75,11 +76,11 @@
 		if (!curl_errno($curl)) {
 		  switch ($http_code = curl_getinfo($curl, CURLINFO_HTTP_CODE)) {
 		    case 200:  # OK
-		    	die(false);
+		    	return die(false);
 		    case 404:
-		    	die(true);
+		    	return die(true);
 		    default:
-	 			throwError('Unexpected HTTP code: '. $http_code, 400);
+	 			return throwError('Unexpected HTTP code: '. $http_code, 400);
 		  }
 		}
 
@@ -91,26 +92,25 @@
 	$date = getdate();
 	$date = $date[0];
 
-	if(is_file($renewMe) && filesize($renewMe) > 0 && is_file($fileName) && filesize($fileName) > 0){
-		$fileR = fopen($fileName, "r");
-		$data = fread($fileR, filesize($fileName));
-		$dot = explode('.', $data);
-		$dolar = explode('$', $dot[1]);
+	if(is_file($renewMe) && filesize($renewMe) > 0){
+		if(is_file($fileName) && filesize($fileName) == 0) checkRenew();
+		else if(is_file($fileName) && filesize($fileName) > 0){
+			$fileR = fopen($fileName, "r");
+			$data = fread($fileR, filesize($fileName));
+			$dot = explode('.', $data);
+			$dolar = explode('$', $dot[1]);
 
-		$expDate = encrypt_decrypt('decrypt', $dot[0]);
-		$gitID = base64_decode($dolar[0]);
+			$expDate = encrypt_decrypt('decrypt', base64_encode($dot[0]));
 
-		if(empty($gitID)) die(true);
+			if(empty($expDate) || $expDate <= $date && $date >= $expDate){
+				fclose($fileR);
+				checkRenew();
 
-		if(empty($expDate) || $expDate <= $date){
-			fclose($fileR);
-			checkRenew();
+			} else die(false);
 
-		} else die(false);
+		} else die(true);
 
-	} else if(is_file($renewMe) && filesize($renewMe) > 0 && is_file($fileName) && filesize($fileName) == 0) 
-		checkRenew();
-	else die(true);
+	} else die(true);
 
 	flush();
 	ob_end_clean();

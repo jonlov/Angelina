@@ -1,11 +1,11 @@
 <?php
- 	header("Access-Control-Allow-Origin: http://localhost:1337");
+	function getDomain(){
+		return '@@renewDomain';
+	}
+
+ 	header("Access-Control-Allow-Origin: ".getDomain());
 	header("Access-Control-Allow-Credentials: true");
 	date_default_timezone_set('UTC');
-	
-	function getDomain(){
-		return 'https://renew.studio';
-	}
 
 	function openRead($fileName = ''){
 		if(is_file($fileName) && filesize($fileName) > 0){
