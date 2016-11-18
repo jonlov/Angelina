@@ -15,6 +15,8 @@ window.renewGo = function() {
         goTo = function(path) {
             (path.split('#').length > 1) ? path = path.split('#')[1]: path = path;
 
+            if (!path) path = 'home';
+
             if ($('#' + path).length == 1 || $.fn.pagepiling) {
                 (!$.fn.pagepiling) ?
                 $('html, body').animate({
@@ -35,7 +37,10 @@ window.renewGo = function() {
 
     $(document).ready(function() {
         $(window).on("load", function() {
+            console.log(window.location.pathname.split('/')[1]);
+
             goTo(window.location.pathname.split('/')[1]);
+
             setTimeout(function() {   
                 loaded = true;
             });
