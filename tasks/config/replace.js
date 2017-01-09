@@ -12,7 +12,7 @@
 var pipeline = require('../pipeline'),
     Gruntfile = require('../../Gruntfile');
 module.exports = function(grunt) {
-    var loader = '<renewLoader style="position:fixed;z-index:9999;top:0;bottom:0;left:0;right:0;background:#fff;"></renewLoader>';
+    var loader = '';//'<renewLoader style="position:fixed;z-index:9999;top:0;bottom:0;left:0;right:0;background:#fff;"></renewLoader>';
 
     grunt.config.set('replace', {
         prod: {
