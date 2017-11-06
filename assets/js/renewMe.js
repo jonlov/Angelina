@@ -184,7 +184,7 @@ ready();
         if (section == null) throw new Error('There is not <section>, <div class="section"> or <div id="section"> to load Renew Logo.');
         section.last().css('position', 'absolute');
 
-        $('<a id="renew" href="@@renewDomainDevReal"><img src="https://jonlov.github.io/assets/img/logo-80x82.png" width="80%" /></a>').insertAfter(section.last());
+        $('<a id="renew" href="@@renewDomainDevReal"><img src="@@renewDomainDevReal/assets/img/logo-80x82.png" width="80%" /></a>').insertAfter(section.last());
 
         // if (isLocalhostActive)
         //     section.last().append('<iframe src="http://localhost:1337/api/renew/isotype" id="renew"></iframe>');
