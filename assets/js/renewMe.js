@@ -154,9 +154,12 @@ $(document).ready(function($) {
                 'height': '75px',
                 'position': 'absolute',
                 'z-index': 99999,
+                'padding-top': '10px',
                 'border': 0,
                 'width': '60px',
-                'border-radius': '2px'
+                'border-radius': '2px',
+                'background': '#fff',
+                'text-align':'center'
             },
             ready = function() {
                 $('renewLoader').css({ display: 'none' });
@@ -181,10 +184,12 @@ ready();
         if (section == null) throw new Error('There is not <section>, <div class="section"> or <div id="section"> to load Renew Logo.');
         section.last().css('position', 'absolute');
 
-        if (isLocalhostActive)
-            section.last().append('<iframe src="http://localhost:1337/api/renew/isotype" id="renew"></iframe>');
-        else
-            section.last().append('<iframe src="@@renewDomainDevReal/api/renew/isotype" id="renew"></iframe>');
+        $('<a id="renew" href="@@renewDomainDevReal"><img src="https://jonlov.github.io/assets/img/logo-80x82.png" width="80%" /></a>').insertAfter(section.last());
+
+        // if (isLocalhostActive)
+        //     section.last().append('<iframe src="http://localhost:1337/api/renew/isotype" id="renew"></iframe>');
+        // else
+        //     section.last().append('<iframe src="@@renewDomainDevReal/api/renew/isotype" id="renew"></iframe>');
 
         $('#renew').css(style);
     });

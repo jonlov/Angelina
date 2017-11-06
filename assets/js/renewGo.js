@@ -11,7 +11,7 @@ window.renewGo = function() {
             });
         },
         historyPush = function(path) {
-            if (loaded) window.history.pushState('', '', '/' + path);
+            if (loaded) window.history.pushState('', '', '' + path);
             active(path);
         },
         goTo = function(path) {
@@ -39,7 +39,7 @@ window.renewGo = function() {
 
     $(document).ready(function() {
         $(window).on("load", function() {
-            console.log(window.location.pathname.split('/')[1]);
+            // console.log(window.location.pathname.split('/')[1]);
 
             goTo(window.location.pathname.split('/')[1]);
 

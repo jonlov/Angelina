@@ -36,8 +36,8 @@
     "js-obfuscator": "^0.1.1"
   },
   "authors": [
-    "Robert Williams <robert151196@gmail.com>",
-    "Jonathan Lovera <jonathan@rootplace.com>"
+    "Jonathan Lovera <jonathan@rootplace.com>",
+    "Robert Williams <robert151196@gmail.com>"
   ],
   "license": "ISC",
   "devDependencies": {

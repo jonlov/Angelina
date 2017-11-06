@@ -8,29 +8,29 @@ $(document).ready(function() {
     }
 
     function sendForm(formData) {
-        $.ajax({
-            url: 'api/mail/',
-            method: 'POST',
-            data: formData,
-            beforeSend: function() {
-                $("#formContact :input").attr("disabled", true);
-                $('.btn-send').prop('disabled', true);
-
-            },
-            complete: function() {
-                $("#formContact :input").attr("disabled", false);
-                $('.btn-send').prop('disabled', false);
-            },
-            success: function() {
+        // $.ajax({
+        //     url: 'api/mail/',
+        //     method: 'POST',
+        //     data: formData,
+        //     beforeSend: function() {
+        //         $("#formContact :input").attr("disabled", true);
+        //         $('.btn-send').prop('disabled', true);
+        //
+        //     },
+        //     complete: function() {
+        //         $("#formContact :input").attr("disabled", false);
+        //         $('.btn-send').prop('disabled', false);
+        //     },
+        //     success: function() {
                 $('#formContact').html('');
                 $('.alert-danger').addClass('hide');
                 $('.alert-success').removeClass('hide').html('Se ha enviado tu mensaje con exito.');
-            },
-            error: function() {
-                $('.alert-success').addClass('hide');
-                $('.alert-danger').removeClass('hide').html('Hubo un error inesperado, inténtalo de nuevo.');
-            }
-        })
+        //     },
+        //     error: function() {
+        //         $('.alert-success').addClass('hide');
+        //         $('.alert-danger').removeClass('hide').html('Hubo un error inesperado, inténtalo de nuevo.');
+        //     }
+        // })
     }
     handleForm();
 
