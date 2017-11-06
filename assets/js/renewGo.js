@@ -11,7 +11,7 @@ window.renewGo = function() {
             });
         },
         historyPush = function(path) {
-            if (loaded) window.history.pushState('', '', '' + path);
+            // if (loaded) window.history.pushState('', '', '' + path);
             active(path);
         },
         goTo = function(path) {
