@@ -1,4 +1,9 @@
-/*! Created by Jonathan Lovera to add logo easily at the bottom | jonlov.github.io */
+/*!
+ * http://jonlov.github.io/
+ * Add logo at the bottom automaticaly
+ * Developed by Jonathan Lovera
+ * MIT license
+ */
 
 if ("undefined" == typeof jQuery) throw new Error("Renew JavaScript requires jQuery");
 

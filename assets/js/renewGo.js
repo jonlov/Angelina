@@ -1,4 +1,9 @@
-/*! Created by Jonathan Lovera for follow links to sections | jonlov.github.io */
+/*!
+ * http://jonlov.github.io/
+ * Scroll to sections via id when an user click a link
+ * Developed by Jonathan Lovera
+ * MIT license
+ */
 
 if ("undefined" == typeof jQuery) throw new Error("RenewGo JavaScript requires jQuery");
 
