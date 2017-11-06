@@ -1,4 +1,4 @@
-// 
+//
 /**
  * Obfucate javascript and php files with Hazy.
  *
@@ -25,7 +25,7 @@ module.exports = function(grunt) {
                 variableExclusions: ['^_get_', '^_set_', '^_mtd_']
             },
             files: {
-                'public/js/renewMe.js': [
+                'docs/js/renewMe.js': [
                     pipeline.temporalFolder + '/js/renewMe.js'
                 ]
             }

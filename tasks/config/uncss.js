@@ -18,7 +18,7 @@ module.exports = function(grunt) {
                 htmlroot: '../' + pipeline.temporalFolder
             },
             files: {
-                src: ['public/index.html']
+                src: ['docs/index.html']
             }
             // options: {
             // files: [{

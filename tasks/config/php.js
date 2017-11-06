@@ -10,7 +10,7 @@ module.exports = function(grunt) {
     grunt.config.set('php', {
         dist: {
             options: {
-            	base: './public',
+            	base: './docs',
                 port: 8080
             }
         }
