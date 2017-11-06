@@ -26,9 +26,9 @@ IMPORTANT !!!!
 
 * The "assets" folder is where all the public files go, do not try to put new files outside the "assets" folder.
 
-## TO-DO
+# License
 
-- [x] Added sections
-- [ ] Effects
+This project is licensed under [MIT][].
 
 [localhost:8080]: http://localhost:8080/
+[MIT]: https://github.com/jonlov/Angelina/blob/master/LICENSE
