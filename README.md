@@ -1,8 +1,6 @@
 Angelina Website
 ==
 
-![alt text](https://gitlab.com/Renew/Angelina/badges/master/build.svg)
-
 ## Installation
 
 To run this project local, clone the git and then inside the folder with the terminal run **(If you dont have nodejs installed, install it first)**
