@@ -3,33 +3,33 @@ Amplitude.init({
         "name": "Tu conmigo y yo contigo",
         "artist": "Angelina",
         "album": "LOUD",
-        // "url": "docs/api/mp3/?file=1",
-        "url": "docs/api/mp3/Angelina - Tu Conmigo Yo Contigo.mp3",
+        // "url": "api/mp3/?file=1",
+        "url": "api/mp3/Angelina - Tu Conmigo Yo Contigo.mp3",
         "live": false,
-        "cover_art_url": "docs/images/cover.png"
+        "cover_art_url": "images/cover.png"
     }, {
         "name": "Part II",
         "artist": "Angelina ft. Julio",
         "album": "How High",
-        "url": "docs/music/1.mp3",
+        "url": "music/1.mp3",
         "live": false,
-        "cover_art_url": "docs/images/cover.png"
+        "cover_art_url": "images/cover.png"
     }, {
         "name": "Roll Up",
         "artist": "Angelina",
         "album": "Roll Up",
-        "url": "docs/music/1.mp3",
+        "url": "music/1.mp3",
         "live": false,
-        "cover_art_url": "docs/images/cover.png"
+        "cover_art_url": "images/cover.png"
     }, {
         "name": "Block Runna'",
         "artist": "Angelina ft. Andres",
         "album": "Block Runna'",
-        "url": "docs/music/1.mp3",
+        "url": "music/1.mp3",
         "live": false,
-        "cover_art_url": "docs/images/cover.png"
+        "cover_art_url": "images/cover.png"
     }],
-    "default_album_art": "docs/images/no-cover-large.png",
+    "default_album_art": "images/no-cover-large.png",
     "callbacks": {
         "after_init": "album_change",
         "after_album_change": "album_change",
