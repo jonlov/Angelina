@@ -1,7 +1,7 @@
 {
   "name": "Angelina",
   "version": "1.0.0",
-  "description": "Landing page build with jquery, html5, css",
+  "description": "Landing page build with JQuery, HTML5, CSS3",
   "contact": "jonathan@rootplace.com",
   "main": "Gruntfile.js",
   "scripts": {
@@ -39,7 +39,7 @@
     "Jonathan Lovera <jonathan@rootplace.com>",
     "Robert Williams <robert151196@gmail.com>"
   ],
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "ejs": "^2.5.2",
     "express": "^4.14.0",
