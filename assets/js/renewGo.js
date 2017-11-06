@@ -10,10 +10,10 @@ window.renewGo = function() {
                 $('a[go="' + path + '"]').addClass('active');
             });
         },
-        // historyPush = function(path) {
+        historyPush = function(path) {
         //     // if (loaded) window.history.pushState('', '', '' + path);
-        //     active(path);
-        // },
+            active(path);
+        },
         goTo = function(path) {
             (path.split('#').length > 1) ? path = path.split('#')[1]: path = path;
 
@@ -50,7 +50,7 @@ window.renewGo = function() {
     });
 
     return {
-        // historyPush: historyPush,
+        historyPush: historyPush,
         goTo: goTo
     }
 }
