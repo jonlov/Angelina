@@ -1,6 +1,10 @@
 Angelina Website
 ==
 
+Angelina Website was developed as a landing page using JQuery, HTML5, CSS3, gulp and PHP.
+
+It has a script in php to download mp3 files and send mails via a form thru AJAX.
+
 ## Installation
 
 To run this project local, clone the git and then inside the folder with the terminal run **(If you dont have nodejs installed, install it first)**
