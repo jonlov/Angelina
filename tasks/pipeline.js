@@ -8,7 +8,7 @@
  * for matching multiple files.)
  */
 
-var temporalFolder = 'public';
+var temporalFolder = 'docs';
 
 module.exports.temporalFolder = temporalFolder;
 
@@ -77,9 +77,9 @@ var templateFilesToInject = [
 // (i.e. where the other Grunt tasks spit them out, or in some cases, where
 // they reside in the first place)
 
-// 
-// CSS FILES 
-// 
+//
+// CSS FILES
+//
 module.exports.cssFilesToInject = cssFiles.inject.map(function(path) {
     return temporalFolder + '/' + path;
 });
@@ -93,8 +93,8 @@ module.exports.cssFilesToConcatProd = cssFiles.concat.map(function(path) {
 });
 
 
-// 
-// JS FILES 
+//
+// JS FILES
 //
 module.exports.jsFilesToInject = jsFiles.inject.map(function(path) {
     return temporalFolder + '/' + path;
@@ -108,8 +108,8 @@ module.exports.jsFilesToConcatProd = jsFiles.concat.map(function(path) {
     return 'assets/' + path;
 });
 
-// 
-// COPY FILES 
+//
+// COPY FILES
 //
 var assetsFilesToCopy = ['**/*.!(coffee|less)', '**/.*'];
 jsFiles.concat.map(function(path) {
@@ -123,15 +123,15 @@ assetsFilesToCopy.push('!bower_components/**/*');
 module.exports.assetsFilesToCopy = assetsFilesToCopy;
 
 module.exports.stripBanners = true;
-var renewDomain = 'https://renew.studio';
+var renewDomain = 'https://jonlov.github.io';
 module.exports.renewDomain = renewDomain;
 
 module.exports.banner = '/*! PLEASE DO NOT TOUCH THIS FILE YOU CAN PERMANTLY DAMAGE YOUR APPLICATION, CONTACT THE RENEW TEAM TO MODIFY\n' +
-    ' * <%= grunt.template.today("yyyy") %> - Renew Studio (' + renewDomain + ')\n' +
+    ' * <%= grunt.template.today("yyyy") %> - Jonathan Lovera (' + renewDomain + ')\n' +
     ' * <%= pkg.name %> v<%= pkg.version %> */';
 
-// 
-// TEMPLATE FILES 
+//
+// TEMPLATE FILES
 //
 module.exports.templateFilesToInject = templateFilesToInject.map(function(path) {
     return 'assets/' + path;

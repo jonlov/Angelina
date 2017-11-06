@@ -1,3 +1,5 @@
+/*! Created by Jonathan Lovera for follow links to sections | jonlov.github.io */
+
 if ("undefined" == typeof jQuery) throw new Error("RenewGo JavaScript requires jQuery");
 
 window.renewGo = function() {
@@ -41,7 +43,7 @@ window.renewGo = function() {
 
             goTo(window.location.pathname.split('/')[1]);
 
-            setTimeout(function() {   
+            setTimeout(function() {
                 loaded = true;
             });
         });

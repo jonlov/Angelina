@@ -1,15 +1,15 @@
 {
   "name": "Angelina",
   "version": "1.0.0",
-  "description": "Test9",
-  "contact": "contact@renew.studio",
+  "description": "Landing page build with jquery, html5, css",
+  "contact": "jonathan@rootplace.com",
   "main": "Gruntfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://gitlab.com/Renew/Angelina.git"
+    "url": "https://github.com/jonlov/Angelina.git"
   },
   "dependencies": {
     "ejs": "^2.5.2",
@@ -36,9 +36,8 @@
     "js-obfuscator": "^0.1.1"
   },
   "authors": [
-    "Renew Studio Team <contact@renew.studio>",
     "Robert Williams <robert151196@gmail.com>",
-    "Jonathan Lovera <jonathan@renew.studio>"
+    "Jonathan Lovera <jonathan@rootplace.com>"
   ],
   "license": "ISC",
   "devDependencies": {

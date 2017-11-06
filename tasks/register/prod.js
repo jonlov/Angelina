@@ -7,7 +7,7 @@ module.exports = function(grunt) {
         'compileAssetsProd',
         'concat:js',
         'concat:css',
-        
+
         'replace:prod',
 
         'uglify:dist',
@@ -19,8 +19,8 @@ module.exports = function(grunt) {
         'linkAssetsBuildProd',
         'htmlmin',
         'phpmin',
-        'hazy:php',
-        
+        // 'hazy:php',
+
         // // 'uncss',
         // 'php',
         // 'watch'

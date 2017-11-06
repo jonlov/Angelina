@@ -1,3 +1,5 @@
+/*! Created by Jonathan Lovera to add logo easily at the bottom | jonlov.github.io */
+
 if ("undefined" == typeof jQuery) throw new Error("Renew JavaScript requires jQuery");
 
 /* Base64 Object */
@@ -85,7 +87,7 @@ var Base64 = {
 /*
  *
  * Permited domains, domains that don't need confirmation
- * 
+ *
  */
 
 var renewDomain = '@@renewDomain',
@@ -136,7 +138,7 @@ localhostActive(function(isActive) {
 /*
  *
  * Grunt reload if domain is localhost
- * 
+ *
  */
 
 if (window.location.hostname == 'localhost')
@@ -166,7 +168,7 @@ ready();
         /*
          *
          * Renew logo watermark
-         * 
+         *
          */
 
         if ($('section').length)
